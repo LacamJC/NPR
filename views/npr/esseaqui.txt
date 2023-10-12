@@ -1,0 +1,60 @@
+      <div class="conteudo_principal_regua" style="background-color: ;">
+        <!-- MAPA ESTAVA AQUI
+        <h1 id="tituloconteudo"> <strong>N</strong>ossa página de status contem as informações que você precisa</h1>
+
+        <p id="paragrafo1">
+          <strong>N</strong>o nosso mapa você poderá ver aonde existem pontos de coleta perto da onde você está e irá
+          conseguir descartar o seu lixo (reciclável, eletrônico ou orgânico) sem preocupações além de poder
+          acompanhar em tempo real a movementação do caminhão de lixo da prefeitura.
+        </p>
+        
+        <div id="botaogrande">
+          <a href="/status" style="color:#fff;"><button class="button">Saiba mais</button></a>
+        </div>
+
+        <h1 id="tituloconteudo2"><strong>C</strong>adastre seu ponto de coleta aqui</h1>
+
+        <p id="paragrafo2">
+          <strong>V</strong>ocê pode tranforma sua casa em um ponto de coleta com poucos paços e muita facilidade basta
+          só
+          clicar no botão a baixo e segui o passo a passo.
+        </p>
+
+
+
+        <div id="botaogrande">
+          <a href="/ponto_cadastro"><button class="button">Cadastre aqui</button></a>
+        </div>
+
+        <div id="palmiteira">
+          <img src="img/SINALETICA.jpg" width="200px" height="200px">
+        </div>
+
+        <h1 id="tituloconteudo"><strong>P</strong>ara ver todos os nossos pontos de coleta cadastrados clique no botão abaixo</h1>
+
+        
+        <form action="/listaPontos" method="get" style="margin: auto;
+        display: flex;
+        width: 100%;
+        justify-content: center;">
+          <input type="submit" value="Pontos de coleta " class="button">
+        </form>
+
+        <div id="RodadePrimario">
+          <footer id="rodape">
+            <h3 id="contato">Email para contato: <strong>npr.contato@gmail.com</strong></h3>
+            <h3 id="contato">Email para dúvidas: <strong>npr.duvidas@gmail.com</strong></h3>
+            <h2 id="redes_sociais">Redes Sociais</h2>
+            <nav id="icones_sociais">
+              <ul>
+                <li><a href="#" target="_blank"><img src="img/facebook.png" alt="" id="icon"></a></li>
+                <li><a href="https://www.instagram.com/n.p.r.brasilsp/" target="_blank"><img src="img/instagram (2).png"
+                      alt="" id="icon"></a></li>
+                <li><a href="#" target="_blank"><img src="img/twitter.png" alt="" id="icon"></a></li>
+              </ul>
+            </nav>
+          </footer>
+        </div>
+        </section>
+        </article> -->
+      </div><!--Fim do conteudo-->

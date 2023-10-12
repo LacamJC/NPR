@@ -1,0 +1,187 @@
+.slider
+{
+  margin: 10px auto;
+  width: 425px;
+  /* border: 1.5px solid #1C7837; */
+  height: 450px;
+  overflow: hidden;
+  background-color: #00000017;
+}
+
+.slides
+{
+  width: 400%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input 
+{
+  display: none;
+}
+
+.slide
+{ 
+  width: 25%;
+  position: relative;
+  transition: 2s;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+flex-direction: column;
+}
+
+.manual-navigation
+{
+  position: absolute;
+  width: 0px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn:not(:last-child)
+{
+  margin-right: 40px;
+}
+
+.manual-btn:hover
+{
+  background-color: whitesmoke;
+}
+
+
+#radio1:checked ~ .first
+{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first
+{
+  margin-left: -25%;
+}
+
+#radio3:checked ~ .first 
+{
+margin-left: -50%;
+}
+
+#radio4:checked ~ .first
+{
+  margin-left: -75%;
+}
+
+
+.navigation-auto div
+{
+  border: 2px solid #20a6ff;
+  padding: 5px;
+  border-radius: 10px;
+cursor: pointer;
+transition: 1s;
+}
+
+.navigation-auto
+{
+  position: absolute;
+  width: 425px;
+  margin-top: 360px;
+
+  justify-content: center;
+  overflow: hidden;
+  opacity: 0;
+  z-index: 0;
+  display: none;
+}
+
+.navigation-auto div:not(:last-child)
+{
+  margin-right: 40px;
+}
+
+
+#radio1:checked ~ .navigation-auto .autor-btn1
+{
+  background-color: #fff;
+}
+
+#radio1:checked ~ .navigation-auto .autor-btn2
+{
+  background-color: #fff;
+}
+
+#radio1:checked ~ .navigation-auto .autor-btn3
+{
+  background-color: #fff;
+}
+
+
+
+.img-carrosel img
+{
+  width: 100px;
+}
+
+.slide p
+{
+  margin: 5px 50px
+}
+
+@media screen and (min-width:1000px)
+{
+  .slider
+  {
+    width: 100%;
+    border: none;
+    box-shadow: 0px 0px 10px 2px #00000024;
+    border-radius: 15px;
+  }
+
+  .slide
+  {
+    width: 25%;
+    position: relative;
+    transition: 2s;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    
+    background-color: #fff
+  }
+
+  #Carrasdosel_area
+  {
+    width: 80%;
+    margin: auto;;
+  }
+
+  .paragrafo
+  {
+    font-size: 1.2em;
+    line-height: 1.4em;
+    text-indent: 20px;
+    
+  }
+
+  .titulo-carrosel
+  {
+    font-size: 1.6em;
+  }
+
+
+}
+
+.slide #paragrafo
+{
+  font-size: 1em;
+  line-height: 1.2em;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700;800&display=swap');
+
+
+
+

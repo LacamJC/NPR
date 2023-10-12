@@ -1,0 +1,62 @@
+:root
+{
+    --borda : 1px solid rgba(0, 0, 0, 0.178);
+}
+
+@media screen and (min-width:1000px)
+{
+
+  body
+  {
+    background-image: linear-gradient(45deg,#03a303e9 10%,  #03a30377  40%, #03a303e9 );
+
+  }
+
+  .bg_img
+  {
+    min-height: 100vh;
+  }
+
+  /* .bg_img
+  {
+    
+    background-image: url('../img/bg_img.png');
+    background-repeat: repeat; /* Usar imagens da npr aumentar o modelo para 300px *d/
+    background-position: center;
+
+    background-position: center top;
+
+    background-attachment: scroll;
+
+    background-position-y: 50%;
+    min-height: 100vh;
+
+  } 
+  */
+
+  .conteudo_pag-1000, .centralizar
+  {
+
+    /*border: 2px solid black;*/
+ 
+    margin: auto;
+    padding-bottom: 50px;
+
+
+    border-left: var(--borda);
+    border-right: var(--borda);
+    border-bottom: var(--borda);
+
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.192);
+  }
+
+  .espacamento
+  {
+    width: 100%;
+    height: 100px; 
+    background: transparent;
+  }
+}

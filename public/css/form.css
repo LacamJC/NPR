@@ -1,0 +1,316 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+
+#formulario_envio
+{
+    /* border: 2px solid black; */
+    max-width: 100%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    border-radius: 30px;
+    /* background-color: transparent; */
+}
+
+.form_item
+{
+    /* background-color: red; */
+    padding: 5px;
+    margin: 20px 0px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.form_item label
+{
+    /* background-color: rgba(0, 0, 255, 0.5); */
+    max-width: 80%;
+
+
+    font-size: 1.3em;
+    font-weight: 700;
+
+    padding: 5px;
+}
+
+.form_item label span 
+{
+    color: red;
+    opacity: 0.5;
+}
+
+.form_item .form_caixa_texto
+{
+    padding: 5px;
+    /* background-color: yellow; */
+    /* border: 2px solid black; */
+
+    
+    font-size: 1.3em;
+    
+    margin: 0px 0px 20px 0px;
+    padding: 5px;
+    border-radius: 15px;
+    text-indent: 12px;
+    font-family: 'Roboto Condensed', cursive;
+
+    border: 0px;
+    background-color: rgba(221, 221, 221, 0.7);
+}
+
+.btn_enviar
+{
+    width: 100%;
+    height: 50px;
+    font-size: 1.5em;
+}
+
+.radio_usuario
+{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid black;
+    border-radius: 15px;
+    
+    background-color: whitesmoke;
+    padding: 5px;
+
+
+}
+
+.radio_usuario_item
+{
+    /* background-color: blue;  */
+    display: flex;
+    
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    
+    margin: 5px;
+    
+    border: 1px solid black;
+    
+    transition: 0.5s ease;
+}
+
+.radio_usuario_item:hover
+{
+    background-color: rgba(0, 0, 0, 0.329);
+}
+
+
+
+ .txt_radio /*Label dentro da div */
+{
+    /* background-color: green; */
+    width: 500px;
+}
+
+.opt_radio
+{
+    background-color: blue;
+
+    width: 15px;
+    padding: 15px;
+    height: 15px;
+}
+
+.ocultar
+{
+    display: none;
+    opacity: 0;
+}
+
+.mostrar
+{
+    display: block;
+
+    border: 1px solid black;
+}
+
+h2
+{
+    font-size: 1.5em;
+    color: gray;
+}
+
+.travado
+{
+    background-color: rgba(0, 0, 0, 0.082);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.btn_buscar
+{
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+
+    background-color: whitesmoke;
+    color: black;
+
+    transition: 0.5s ease;
+    
+}
+
+.btn_buscar:hover
+{
+    background-color: rgba(0, 128, 0, 0.479);
+
+}
+
+#form_empresa, #form_cadastro_funcionario, #form_cadastro_usuario
+{
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.034);
+    padding: 10px;
+}
+
+/* CSS PARA A PAGINA DE CADASTRO DE PONTO DE COLETA */
+
+.checkbox_list
+{
+    /* border: 1px solid rgba(0, 0, 0, 0.37);
+    border-radius: 15px; */
+    max-width: 650px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+
+}
+
+.checkbox_list .checkbox_item
+{
+
+    margin: 10px;
+    border: 2px solid black;
+    accent-color: green;
+    width: 200px;
+    
+}
+
+
+
+.checkbox_item label
+{
+    /* background-color:rgba(0, 0, 255, 0.121);; */
+    display: flex;
+
+    padding: 5px;
+
+    transition: 0.5s ease-in-out;
+}
+
+.checkbox_item label:hover
+{
+    background-color: rgba(0, 128, 0, 0.088);
+}
+
+
+
+.file-drop-area {
+    margin: 50px auto;
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #999;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .file-input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .drop-message {
+    font-size: 16px;
+    color: #999;
+  }
+  
+  #selected-image {
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 10px;
+  }
+  
+  
+  
+
+  @media screen and (max-width:900px) {
+    #formulario_envio
+    {
+        border: none;
+        border-radius: 0px;
+        background-color: transparent;
+    }
+  }
+
+
+
+.icon_img_checkbox
+{
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+input[type="file"] /*A estilização dele vai ser feita pelo label*/
+{
+    display: none;
+}
+
+.arquivo
+{
+    background-color: rgba(66, 184, 62, 0.37);
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    margin: auto;
+    font-size: 0.8em;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+}
+
+.arquivo:hover
+{
+    cursor: pointer;
+}
+
+.ocultarSenha
+{
+    color: black;
+    font-size: 1em;
+    font-weight: bold;
+    
+}
+/*(*/

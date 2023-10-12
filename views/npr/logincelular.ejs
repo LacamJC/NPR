@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1ab94d0eba.js" crossorigin="anonymous"></script>
+    <title>Login NPR</title>
+    <link rel="stylesheet" href="css/logincelular.css" type="text/css">
+    <link rel="stylesheet" href="css/fonte.css">
+    <link rel="stylesheet" href="css/erro.css">
+    <link rel="shortcut icon" href="img/icon_reciclagem-Naoseidasdquasnt.png" type="image/x-icon">
+
+</head>
+<body>
+
+
+    <!-- <div id="msg">
+        <_____%______= erros %________>
+    </div> -->
+
+    <div id ="centro">
+
+    <main class="container">
+        <h2>Login</h2>
+        <form action="/verificaLogin" method="POST">
+
+            <div class="input-field">
+                <input type="email" name="emaillogin" id="emaillogin"
+                    placeholder="E-mail" value="<%= usuariologin %>">
+                <div class="underline"></div>
+            </div>
+            <div class="input-field">
+                <input type="password" name="senhalogin" id="senhalogin"
+                    placeholder="Senha" maxlength="6">
+                <div class="underline"></div>
+            </div>
+
+            <br>
+
+            <div id="msg_erro" class="off">
+                <% for(let i = 0; i < erros.length; i++) { %>
+                        <div id="frase_erro"><%= erros[i] %></div>
+                <% } %>
+            </div>  
+         
+
+        <input type="submit" value="Entrar" class="btn_entrar">
+        <!-- <a href="/"><button id="Entrarbotao" style="font-weight: bold;">Entrar</button></a> -->
+
+     
+        <div id="ir_cadastro">
+            <a href="/cadastro">Cadastre-se</a>
+        </div>
+    </form>
+
+        <div class="footer">
+            <span>Conectar com redes socias </span>
+            <div class="social-fields">
+                <div class="social-field twitter">
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                        Conectar com Twitter
+                    </a>
+                </div>
+                <div class="social-field facebook">
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                        Conectar com Facebook
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+  
+</body>

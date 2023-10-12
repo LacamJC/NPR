@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios cadastrados</title>
+    <link rel="stylesheet" href="css/bg_img.css">
+    <link rel="stylesheet" href="css/fonte.css">
+    <link rel="stylesheet" href="css/homecelular.css">
+    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="shortcut icon" href="img/icon_reciclagem-Naoseidasdquasnt.png" type="image/x-icon">
+</head>
+<body>
+    <!-- <h1>pagina de perfil</h1>
+
+    <a href="/">Home page</a>
+
+    <main>
+        <h2>Olá, <%= nomeUsuario %></h2>
+    </main> -->
+
+    <div class="bg_img">
+        <div class="conteudo_pag-1000">
+            <header id="header">
+                <div id="logotipoNPR">
+                  <img src="img/logotipoNPRcelularcomNPRPARAFORA.svg" width="120px" height="120px">
+                </div>
+                <div id="logo">
+        
+                </div>
+                <nav id="nav">
+                  <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                    aria-expanded="false">Menu
+                    <span id="hamburger"></span>
+                  </button>
+                  <ul id="menu" role="menu">
+                    <li ><a href="/">Home</a></li>
+                    <li><a href="/status">Status</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/cadastro">Cadastro</a></li>
+                    <li><a href="/ponto_cadastro">Ponto de coleta</a></li>
+                    <!-- <li><a href="/perfil">Lista usuario</a></li> -->
+                  </ul>
+                </nav>
+              </header>
+
+              <main class="area_perfil">
+                <div class="conteudo_principal_regua">
+                    
+                        <!-- <div class="fotoPerfil"><img src="img/<%=fotoUsuario%>" alt="<%=fotoUsuario%>" width="80px" height="80px"></div>
+                        <h1 id="apresentacao"><%=nomeUsuario%></h1>
+                    
+                    <section class="info_usuario">
+                        <div class="info_usuario_item"><label for="">CPF : <span class="info"><%= cpfUsuario %></span></label></div>
+
+                        <div class="info_usuario_item"><label for="">EMAIL : <span class="info"><%= emailUsuario %></span></label></div>
+
+                        <div class="info_usuario_item"><label for="">CEP : <span class="info"><%= cepUsuario %></span></label></div>
+
+                        <div class="info_usuario_item"><label for="">TELEFONE : <span class="info"><%= telUsuario %></span></label></div>
+                    </section> -->
+
+                    <main id="usuario_perfil">
+                        <div class="foto_perfil coluna"><img src="img/<%=fotoUsuario%>" alt="Foto usuario" width="80px" height="80p"></div>
+                      <%
+                        var palavras = nomeUsuario; 
+                        var frase = palavras.split(" ");
+                        var primeiras = frase.slice(0, 2);
+                        var usuario = primeiras.join(" "); 
+                      %><!--Tratamento para mostrar apenas nome e sobrenome do usuario-->
+                        <div class="info_usuario coluna">
+                          <h1 class=""><%=usuario%></h1>
+                          <h2 class="info">E-mail</h2>
+                          <span class="dados_usuario"><%=nomeUsuario%></span>
+                            <h2 class="info">Número</h2>
+                            <span class="dados_usuario"><%=telUsuario%></span>
+                            <h2 class="info">CPF</h2>
+                            <span class="dados_usuario"><%=cpfUsuario%></span>
+                              <h2 class="info">CEP</h2>
+                              <span class="dados_usuario"><%=cepUsuario%></span>                        
+                        </div>
+
+                          
+                        <div class="outros coluna"><h2>Pontos de coleta cadastrados</h2> <a href="#"><button>Ver</button></a></div>
+                      </div>
+                    </main>
+                </div>
+              </main>
+        </div>
+    </div>    
+
+    <script src="js/script.js"></script>
+</body>
+</html>

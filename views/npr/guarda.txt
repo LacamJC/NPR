@@ -1,0 +1,22 @@
+              <h1 class="tituloPrincipal"><strong>Q</strong>uem somos ? </h1>
+              <p class="paragrafo_att">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam neque cupiditate ad porro enim labore cumque veritatis quisquam exercitationem quasi hic maiores esse libero voluptatibus dolorem ipsa, ex fugiat pariatur? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis aliquid nulla totam eos asperiores dolor quia placeat provident illum esse recusandae nam fuga consequuntur sequi perferendis nostrum, sint alias. Reprehenderit!</p>
+
+              <p class="paragrafo_att">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio fuga reiciendis totam suscipit, molestiae consequatur dicta, sed odio quaerat magni eaque dolorem nulla voluptatibus corrupti vel ab ducimus, maiores perferendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint necessitatibus id, modi, quas optio dicta accusantium alias aspernatur eaque ipsum porro doloremque quae quidem nam. Eos odit labore natus quibusdam!</p>
+
+
+              <h2 class="subtitulo_att"><strong>O</strong>nde posso saber os horarios ?</h2>
+
+              <p class="paragrafo_att">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dignissimos quam consectetur officiis, veritatis, modi porro quasi alias eos, amet sint rem quae. Aliquid excepturi architecto ullam. Illum, enim soluta. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, at! Recusandae consectetur blanditiis rerum nesciunt nemo illo ea ex nisi libero possimus, dicta ducimus ullam eaque magnam earum, quidem esse.</p>
+
+              <a href="/status" class="btn_link">Status</a>
+
+
+              <h2 class="subtitulo_att"><strong>Q</strong>uero cadastrar um ponto de coleta</h2>
+              
+              <p class="paragrafo_att">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus alias debitis ipsum, qui aut vitae reprehenderit illum quam facilis tempore corporis odio repudiandae, velit libero, atque animi exercitationem obcaecati consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ratione quas nam. Mollitia necessitatibus explicabo magni iusto possimus officiis ad quia quasi eaque eius! Repellat sapiente libero nostrum quasi dolores?
+              </p>
+              
+              <p class="paragrafo_att">Caso queira saber quais pontos ja temos em nosso sistema <a href="#" class="paragrafo_link">Entre aqui</a> para mais informações</p>
+
+              <a href="#" class="btn_link">Cadastrar</a>
+

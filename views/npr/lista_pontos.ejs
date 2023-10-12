@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista pontos</title>
+    <link rel="stylesheet" href="css/homecelular.css">
+    <link rel="stylesheet" href="css/bg_img.css">
+    <link rel="stylesheet" href="css/fonte.css">
+
+    <link rel="stylesheet" href="css/lista_ponto.css">
+</head>
+<body>
+    
+    
+    <div class="bg_img">
+        <div class="conteudo_pag-1000">
+            <header id="header">
+                <div id="logotipoNPR">
+                <img src="img/logotipoNPRcelularcomNPRPARAFORA.svg" width="120px" height="120px">
+                </div>
+                <div id="logo"></div>
+            
+                <nav id="nav">
+                <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                    aria-expanded="false">Menu
+                    <span id="hamburger"></span>
+                </button>
+                <ul id="menu" role="menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/status">Status</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/cadastro">Cadastro</a></li>
+                    <li><a href="/ponto_cadastro">Ponto de coleta</a></li>
+                </ul>
+                </nav>
+            </header>
+
+            <div class="conteudo_principal_regua">
+                    <h1>Pontos de coleta cadastrados</h1>
+
+                    <div id="tabela">
+
+                            <% console.log(pontoColeta.length);for(i=0; i < pontoColeta.length; i++) {
+                            if(numLista[i].length == 0){numLista[i] = "Não informado"}%>
+                            <div class="celula">
+                                <div class="item_celula i1">
+
+                                    <div class=""><label for="" class="info">Rua </label> <h3 class="dados"> <%= ruaLista[i]%></h3></div>
+
+                                    <label for="" class="info">Ponto de referencia </label> <h3 class="dados"> <%= nomeLista[i] %></h3>
+
+                                    <label for="" class="info">Número </label> <h3 class="dados"> <%= numLista[i] %></h3>
+
+                                    <label for="" class="info">Bairro </label> <h3 class="dados"> <%= bairroLista[i] %></h3>  
+
+                                    <label for="" class="info">Cidade </label> <h3 class="dados"> <%= cidadeLista[i] %></h3>
+
+                                    <label for="" class="info">Tipo </label><h3 class="dados"><%= tipoLista[i]%></h3>
+                                  
+                                    
+
+                                </div>
+                       
+                                <div class="item_celula" style="display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;">
+                                    <img src="img/<%=imagemLista[i]%>" alt="Foto nao cadastrada" class="img_ponto">
+                                </div>
+                            </div>
+                        <%}%>
+
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="js/script.js"></script>
+</body>
+</html>

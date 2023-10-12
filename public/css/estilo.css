@@ -1,0 +1,45 @@
+body {
+    background-color: #d39393;
+}
+#titulo {
+    text-align: center;
+    font-family: Arial;
+    font-size: 5em;
+    color: blue;
+}
+#caixa{
+    margin: auto;
+    width: 30%;
+    border: 2px solid #042c24;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+}
+p{
+    font-family: Verdana;
+    font-size: 1.5em;
+}
+#caixa_formulario {
+    width: 400px;
+    margin: auto;
+    font-size: 1em;
+    font-family: arila;
+}
+#caixa_formulario label {
+    display: block;
+    margin: 10px 0px 0px 0px;
+}
+input{ 
+    background-color: bisque;
+    border: 1px solid #042c24;
+    border-radius: 8px;
+    color: cadetblue;
+}
+button {
+    background-color: #000;
+    color:#fff;
+    font-family: Verdana;
+    font-size: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}

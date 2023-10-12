@@ -1,0 +1,69 @@
+h1
+{
+    text-align: center;
+}
+
+#tabela
+{
+    border: 1px solid black;
+
+
+    border: 1px solid black;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    min-height: 300px;
+    
+    /* background-color: rgba(0, 0, 255, 0.541); */
+    border-radius: 15px;
+    flex-wrap: wrap;
+}
+
+#tabela .celula
+{   
+    /* background-color: #ff00005b; */
+
+    display: flex;
+
+    width: 90%;
+}
+
+
+
+.item_celula
+{
+    margin-bottom: 100px;
+}
+
+.dados
+{
+
+}
+
+.img_ponto
+{   
+    margin: auto;
+    background-color: pink;
+    width: 400px;
+    height: 400px;
+}
+
+.info
+{
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.dados
+{
+    font-size: 0.8em;
+}
+
+.i1
+{
+    padding: 5px;
+}

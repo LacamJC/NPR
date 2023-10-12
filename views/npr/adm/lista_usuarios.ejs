@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Usuários</title>
+</head>
+<link rel="stylesheet" href="css/tabela.css">
+
+<body>
+    <h1>Lista de Usuários Cadastrados</h1>
+
+    <table>
+        <tr>
+            <td>Código de usuario</td>
+            <td>Nome</td>
+            <td>Tipo de usuario</td>
+        </tr>
+
+        <% todosUsuarios.forEach(function(usuario) {%>
+
+            <tr>
+                <td><%=usuario.cod_usuario%></td>
+                <td><%=usuario.nome_usuario%></td>
+                <td><%=usuario.nivel_usuario == 1 ? "Administrador" : "Comum"%></td>
+            </tr>
+
+        <%});%>
+    </table>
+
+
+
+
+    <form action="/deletarUsuario" method="post">
+        <h1>Deletar usuario</h1>
+        <input type="text" name="codUsuario" id="codUsuario">
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>
+</html>

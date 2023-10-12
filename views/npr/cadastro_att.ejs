@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro usuario</title>
+    <link rel="stylesheet" href="css/homecelular.css">
+    <link rel="stylesheet" href="css/bg_img.css">
+    <link rel="stylesheet" href="css/fonte.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="shortcut icon" href="img/icon_reciclagem-Naoseidasdquasnt.png" type="image/x-icon">
+</head>
+<body>
+    <div class="bg_img">
+        <div class="conteudo_pag-1000">
+            <header id="header">
+                <div id="logotipoNPR">
+                <img src="img/logotipoNPRcelularcomNPRPARAFORA.svg" width="120px" height="120px">
+                </div>
+                <div id="logo"></div>
+            
+                <nav id="nav">
+                <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                    aria-expanded="false">Menu
+                    <span id="hamburger"></span>
+                </button>
+                <ul id="menu" role="menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/status">Status</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li class="pag_active"><a href="/cadastro">Cadastro</a></li>
+                    <li><a href="/ponto_cadastro">Ponto de coleta</a></li>
+                </ul>
+                </nav>
+            </header>
+
+            <!-- <div id="msg">
+                <______%= erros%_________>
+            </div> -->
+
+            <div class="conteudo_principal_regua" style="background-color: transparent;">
+                <form method="post" action="/add_usuario" id="formulario_envio"> 
+                    <h1>Cadastro de novo usuario</h1>
+                    <div class="form_item">
+                        <label for="nome">Nome completo <span>*</span></label>
+                        <input type="text" name="nomeUsuario" id="usuario_nome" required placeholder="Ex: Mario dos santos de andrade" class="form_caixa_texto" value="<%=valNome%>">
+                    </div>
+                    <div class="form_item">
+                        <label for="cpf">CPF <span>*</span></label>
+                        <input type="text" name="cpfUsuario" id="id_cpf" maxlength="14" required placeholder="Ex: 312.412.654-11" class="form_caixa_texto" value="<%=valCpf%>">
+                    </div>
+                    <div class="form_item">
+                        <label for="email">Email <span>*</span></label>
+                        <input type="email" name="emailUsuario" id="" required placeholder="Ex: mario_andrade@gmail.com" class="form_caixa_texto" value="<%=valEmail%>">
+                    </div>
+                    <div class="form_item">
+                        <label for="usuario_telefone">Telefone <span>*</span></label>
+                        <input type="text" name="telUsuario" id="id_tel" maxlength="14" required placeholder="Ex: (11) 94123-2124" class="form_caixa_texto" value="<%=valTel%>">
+                    </div>
+
+<!-- Pq precisa informar o numero da casa e o complemento em um formulario de cadastro???????????
+                    <div class="form_item">
+                        <label for="casa_numero">n da casa <span>*</span></label>
+                        <input type="text" name="numEndUsuario" id="" class="form_caixa_texto">
+                    </div>
+                    
+                    <div class="form_item">
+                        <label for="complemento">Complemento</label>
+                        <input type="text" name="compleEndUsuario" id="" placeholder="Ex: Próximo a avenida das bandeiras" class="form_caixa_texto">
+                    </div> -->
+                    <div class="form_item">
+                        <label for="senha">Senha <span>*</span></label>
+                        <input type="password" name="senhaUsuario" id="senha" required placeholder="******" maxlength="6" class="form_caixa_texto">
+                  
+                    </div>
+                    <div class="form_item">
+                        <label for="confirma_senha">Confirmar senha <span>*</span></label>
+                        <input type="password" name="senhaConfirmaUsuario" id="confirmaSenha" required class="form_caixa_texto" placeholder="******" maxlength="6">
+                        <label for="ocultarSenha" class="ocultarSenha" style="    color: black;
+                        font-size: 1em;
+                        font-weight: bold;
+                        ">mostrar / ocultar senha<input type="checkbox" name="" id="ocultarSenha"></label>
+                    </div>
+                    
+
+                    <div class="msg">
+                        <%=msg%>
+                    </div>
+
+                    <div class="form_item">
+                        <label for="foto_perfil">Foto de perfil</label>
+                        <input type="file" name="fotoPerfil" id="fotoPerfil" class="form_caixa_texto" style="display: block;">
+                    </div>
+
+                    <div class="form_item">
+                        <label for="cep">CEP <span>*</span></label>
+                        <input type="text" name="cepUsuario" id="id_cep" maxlength="9"  placeholder="Ex: 03121-001" class="form_caixa_texto" value="<%=valCep%>" required minlength="9">
+                    </div>
+
+                    
+
+                   <!--
+                    <div class="form_item">
+                        <div class="radio_usuario">
+                                <h2>Tipo de usuario</h2> 
+
+                                <div class="radio_usuario_item" onclick="selecionado(0)">
+                                    <label for="radio_0" class="txt_radio">Quero apenas usar o mapa e também poder cadastrar pontos de coleta</label>
+                                    <input type="radio" class="opt_radio" name="tipo_usuario" id="radio_0">
+                                </div>
+
+                                <div class="radio_usuario_item" onclick="selecionado(1)">
+                                    <label for="radio_1" class="txt_radio">Sou uma empresa e gostaria de fazer uma parceria</label>
+                                    <input type="radio" class="opt_radio" name="tipo_usuario" id="radio_1" >
+                                </div>
+
+                                <div class="radio_usuario_item" onclick="selecionado(2)">
+                                    <label for="radio_2" class="txt_radio">Quero me cadastrar como funcionario de uma empresa ja cadastrada</label>
+                                    <input type="radio" class="opt_radio" name="tipo_usuario" id="radio_2">
+                                </div>
+                        </div>
+                    </div>
+
+                    <div id="form_empresa" class="ocultar form_item">
+                        <h2>Dados da empresa </h2>
+
+                        <div class="form_item">
+                            <label for="">Nome fantasia <span>*</span></label>
+                            <p class="form_caixa_texto travado" id="fake_nome_fantasia" style="height: 50px;"></p>
+                        </div>
+
+                        <div class="form_item">
+                            <label for="">Endereço <span>*</span></label>
+                            <p class="form_caixa_texto travado" id="fake_endereco" style="height: 50px;"></p>
+                        </div>
+
+                        <div class="form_item">
+                            <label for="">Telefone <span>*</span></label>
+                            <p class="form_caixa_texto travado" id="fake_telefone" style="height: 50px;"></p>
+                        </div>
+
+                        <div class="form_item">
+                            <label for="">Email <span>*</span></label>
+                            <p class="form_caixa_texto travado" id="fake_email" style="height: 50px;"></p>
+                        </div>
+
+                    </div>
+
+                    <div id="form_cadastro_funcionario" class=" ocultar ">
+                        <h2>Dados do funcionario</h2>
+
+
+                        <div class="form_item">
+                            <label for="">CNPJ da empresa</label>
+                            <input type="text" name="" id="" class="form_caixa_texto">
+                        </div>
+                    </div>
+
+                    <div id="form_cadastro_usuario" class=" ocultar ">
+ 
+                            <div class="form_item">
+                                <label for="">Rua</label>
+                                <input type="text" class="form_caixa_texto travado" id="cepRua">
+                            </div>
+
+                            <input type="button" value="Consultar" onclick="analiseCep()">
+                    </div>
+                    -->
+
+                    <input type="submit" value="Enviar" class="btn_enviar" onclick="alert_cadastro()">
+
+                    
+                </form>
+
+
+            </div>
+        </div>
+      </div>
+
+
+      <script src="js/mascara.js"></script>
+      <script src="js/ocultar.js"></script>
+      <script src="js/busca.js"></script>
+      <script src="js/script.js"></script>
+
+      <script>
+   
+            const passwordInput = document.getElementById("senha");
+            const confirmPassword = document.getElementById("confirmaSenha");
+            const ocultarSenha = document.getElementById("ocultarSenha");
+
+            ocultarSenha.addEventListener("change", function() {
+                if (this.checked) {
+                    passwordInput.type = "text";
+                    confirmPassword.type = "text";
+                    console.log("Mostrar senha")
+                }  else {
+                    passwordInput.type = "password";
+                    confirmPassword.type = "password";
+                    console.log("Ocultar senha")
+                }
+            })
+        
+      </script>
+</body>
+</html>

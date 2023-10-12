@@ -1,0 +1,59 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700;800&display=swap');
+
+
+
+
+h1, h2 , h3
+{
+    font-family: 'Wix Madefor Display', sans-serif;
+}
+
+h1
+{
+    font-weight: 600;
+}
+
+h2, h3
+{
+    font-weight: 500;
+}
+
+p, a, #txt_data, label, input[type="text"]
+{
+    font-family: 'Wix Madefor Display', sans-serif;
+}
+
+
+
+/*TIVE QUE COLOCAR O CSS DOS BOTOES DO MENU POR PURA PREGUIÇA*/
+nav ul li 
+{
+    /* background-color: rgba(255, 0, 0, 0.236); */
+    /* margin-top: 34px; */
+    padding: 2px;
+    
+    /* border-radius: 20px  20px 0px 0px; */
+    /* border-radius: 20px; */
+    transition: 0.5s ease;
+    
+}
+
+nav ul  li:hover
+{
+    /* background-color: rgba(0, 0, 0, 0.16); */
+
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-decoration-color: green;
+    text-decoration-thickness: 2px;
+}
+
+.pag_active
+{
+    text-decoration:underline;
+    text-decoration-color: green;
+    
+    text-decoration-thickness: 2px;
+    
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios cadastrados</title>
+    <link rel="stylesheet" href="css/bg_img.css">
+    <link rel="stylesheet" href="css/fonte.css">
+    <link rel="stylesheet" href="css/homecelular.css">
+    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="shortcut icon" href="img/icon_reciclagem-Naoseidasdquasnt.png" type="image/x-icon">
+</head>
+<body>
+    <!-- <h1>pagina de perfil</h1>
+
+    <a href="/">Home page</a>
+
+    <main>
+        <h2>Olá, <%= nomeUsuario %></h2>
+    </main> -->
+
+    <div class="bg_img">
+        <div class="conteudo_pag-1000">
+          
+            <header id="header">
+                <div id="logotipoNPR">
+                  <img src="img/logotipoNPRcelularcomNPRPARAFORA.svg" width="120px" height="120px">
+                </div>
+                <div id="logo">
+        
+                </div>
+                <nav id="nav">
+                  <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                    aria-expanded="false">Menu
+                    <span id="hamburger"></span>
+                  </button>
+                  <ul id="menu" role="menu">
+                    <li ><a href="/">Home</a></li>
+                    <li><a href="/status">Status</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/cadastro">Cadastro</a></li>
+                    <li><a href="/ponto_cadastro">Ponto de coleta</a></li>
+                    <!-- <li><a href="/perfil">Lista usuario</a></li> -->
+                  </ul>
+                </nav>
+              </header>
+
+           
+
+              <%
+              var palavras = nomeUsuario; 
+              var frase = palavras.split(" ");
+              var primeiras = frase.slice(0, 2);
+              var usuario = primeiras.join(" "); 
+            %><!--Tratamento para mostrar apenas nome e sobrenome do usuario-->
+
+              <div class="content">
+                <div class="profile">
+                    <div class="topProfile">
+                        <img src="img/<%=fotoUsuario%>" alt="" class="profilePicture">
+                        <h3><%=usuario%></h3>
+                        <h4><%=tipoUsuario%></h4>
+                    </div>
+                    <div class="contactInfo">
+                        <div class="item">
+                            <h2>Endereço de email</h2>
+                            <span class="profileInfo"><%=emailUsuario%></span>
+                        </div>
+                        <div class="item">
+                            <h2>Número de telefone</h2>
+                            <span class="profileInfo"><%=telUsuario%></span>
+                        </div>
+                        <div class="item">
+                            <h2>Cep</h2>
+                            
+                            <span class="profileInfo" ><%=cepUsuario%></span>
+                        </div>
+                    </div>
+                </div>
+                <main>
+
+                    <%if (nivelUsuario == 1){console.log("USUARIO ADMINISTRADOR")
+                    
+                    %><!--Area para adm-->
+                    <div class="topMain">
+                        <!-- <a href="/admListaUsuarios"  class="adm_consulta" target="_blank">Consultar lista de usuarios cadastrados</a>
+                        
+                        <a href="/admListaPontos" class="adm_consulta" target="_blank">Consultar lista de pontos cadastrados</a> -->
+                        <div class="objLink"><a href="/admListaUsuarios" target="_blank"> <img src="img/icons/cadeado_icon.png" alt="" class="iconList">Consultar Lista de Usuarios cadastrados</a></div>
+                        <div class="objLink"><a href="/admListaPontos" target="_blank"><img src="img/icons/cadeado_icon.png" alt="" class="iconList">Consultar Lista de Pontos cadastrados</a></div>
+                    </div>
+                    <%
+                } else {%>
+                    <!--Area para comum-->
+                    <p>USUARIO NAO ADMINISTREADOR</p>
+                    <%}
+                    
+                    %>
+
+                    
+                   
+                    
+                </main>
+            </div>
+        </div>
+    </div>    
+
+    <script src="js/script.js">
+
+
+    </script>
+
+    <script>
+    </script>
+</body>
+</html>

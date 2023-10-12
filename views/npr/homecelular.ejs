@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+    integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+
+
+  <!-- <script src="https://www.google.com/maps/d/u/0/embed?mid=1z9hYFfb9eokG0NCWYxE1lCgq85CatiI&ehbc=2E312F"
+    integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin="">
+    </script> -->
+
+  <title>Mobile NPR</title>
+
+  <link rel="shortcut icon" href="img/icon_reciclagem-Naoseidasdquasnt.png" type="image/x-icon">
+
+
+  <link rel="stylesheet" href="css/homecelular.css" type="text/css">
+  <link rel="stylesheet" href="css/carrosel.css" type="text/css">
+  <link rel="stylesheet" href="css/bg_img.css" type="text/css">
+  <link rel="stylesheet" href="css/fonte.css" type="text/css">
+
+  <style>
+    html
+    {
+      scroll-behavior: smooth
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <div class="bg_img">
+    <div class="conteudo_pag-1000">
+      <header id="header">
+        <div id="logotipoNPR">
+          <img src="img/logotipoNPRcelularcomNPRPARAFORA.svg" width="120px" height="120px">
+        </div>
+        <div id="logo">
+
+        </div>
+        <nav id="nav">
+          <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+            aria-expanded="false">Menu
+            <span id="hamburger"></span>
+          </button>
+          <ul id="menu" role="menu">
+            <li class="pag_active"><a href="/">Home</a></li>
+            <li><a href="/status">Status</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/cadastro">Cadastro</a></li>
+            <li><a href="/ponto_cadastro">Ponto de coleta</a></li>
+            <!-- <li><a href="/perfil">Lista usuario</a></li> -->
+            <!-- <li><a href="/lista_pontos">Pontos cadastrados</a></li> -->
+          </ul>
+        </nav>
+      </header>
+
+      <!--  <h1 id="titulomapa">MAPA</h1>  -->
+
+      <div id="map">
+        <!-- <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1z9hYFfb9eokG0NCWYxE1lCgq85CatiI&ehbc=2E312F"
+          width="100%" height="100%"></iframe> -->
+          <iframe src="https://www.google.com/maps/d/embed?mid=1ssfGnY7Sw5PLblWZ99n6Cn8j9c7diOY&ehbc=2E312F" width="100%" height="100%"></iframe>
+      </div>
+      <div id="controle">
+      </div>
+      <section id="Carrasdosel_area">
+        <div class="slider">
+          <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <div class="slide first">
+              <div class="img-carrosel">
+                <img src="img/img_carrosel_1.png" alt="">
+              </div>
+              <h2 class="titulo-carrosel">Reciclagem ? </h2>
+              <p class="paragrafo">
+                A reciclagem é uma prática importante para reduzir a quantidade de resíduos gerados, evitar a extração
+                de recursos naturais e preservar o meio ambiente. Ao reciclar materiais como papel, plástico, vidro e
+                metais, podemos contribuir para a economia de energia, a redução da poluição do ar, da água e do solo,
+                além de gerar empregos. Ao adotar práticas mais conscientes em relação ao descarte de resíduos, podemos
+                garantir um futuro mais sustentável para as próximas gerações.
+              </p>
+            </div>
+            <div class="slide">
+              <div class="img-carrosel"><img src="img/img_carrosel_1.png" alt=""></div>
+              <h2 class="titulo-carrosel">Impacto do plástico</h2>
+              <p class="paragrafo">
+                O plástico é um dos principais poluentes do planeta, levando centenas de anos para se decompor e
+                causando impactos negativos na saúde dos ecossistemas e dos seres humanos. Além disso, a produção de
+                plástico gera emissões de gases poluentes que contribuem para o aquecimento global e as mudanças
+                climáticas. Para reduzir os impactos negativos do plástico, é importante adotar práticas mais
+                conscientes e responsáveis em relação ao seu consumo e descarte, priorizando materiais sustentáveis e
+                biodegradáveis.
+              </p>
+
+            </div>
+            <div class="slide">
+              <div class="img-carrosel"><img src="img/img_carrosel_1.png" alt=""></div>
+              <h2 class="titulo-carrosel">Aquecimento global e nosso lixo.</h2>
+              <p class="paragrafo">
+                O descarte inadequado do lixo é um grande problema ambiental, contribuindo para o aquecimento global.
+                Isso acontece porque quando o lixo é depositado em aterros sanitários, ele passa por um processo de
+                decomposição anaeróbica, liberando metano na atmosfera, um gás de efeito estufa extremamente nocivo ao
+                meio ambiente. A liberação de metano e outros gases poluentes é um dos principais fatores que contribuem
+                para o aquecimento global, além de contaminar o solo e a água, comprometendo a saúde pública.
+              </p>
+            </div>
+
+            <div class="navigation-auto">
+              <div class="auto-btn1"></div>
+              <div class="auto-btn2"></div>
+              <div class="auto-btn3"></div>
+            </div>
+          </div>
+          <div class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+          </div>
+        </div>
+      </section>
+      <div class="conteudo_principal_regua" style="    padding: 0px;">
+        <main>
+          <article class="article">
+
+
+
+            <h1 class="tituloPrincipal" id="quemSomos"><strong>Q</strong>uem somos ? </h1>
+            <p class="paragrafo_att">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam neque cupiditate ad porro enim labore cumque veritatis quisquam exercitationem quasi hic maiores esse libero voluptatibus dolorem ipsa, ex fugiat pariatur? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis aliquid nulla totam eos asperiores dolor quia placeat provident illum esse recusandae nam fuga consequuntur sequi perferendis nostrum, sint alias. Reprehenderit!</p>
+
+            <p class="paragrafo_att">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio fuga reiciendis totam suscipit, molestiae consequatur dicta, sed odio quaerat magni eaque dolorem nulla voluptatibus corrupti vel ab ducimus, maiores perferendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint necessitatibus id, modi, quas optio dicta accusantium alias aspernatur eaque ipsum porro doloremque quae quidem nam. Eos odit labore natus quibusdam!</p>
+
+            <div class="indice">
+              <h2 class="subtitulo_att">Indice</h2>
+              <ul class="lista_indice">
+                <li class="lista_item_indice"><a href="#horarios">Nossos horarios</a></li>
+                <li class="lista_item_indice"><a href="#ponto">Pontos de coleta</a></li>
+                <li class="lista_item_indice"><a href="#reciclagem">Sobre a reciclagem</a></li>
+              </ul>
+            </div>
+
+
+            <h2 class="subtitulo_att" id="horarios"><strong>O</strong>nde posso saber os horarios ?</h2>
+
+            <p class="paragrafo_att">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dignissimos quam consectetur officiis, veritatis, modi porro quasi alias eos, amet sint rem quae. Aliquid excepturi architecto ullam. Illum, enim soluta. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, at! Recusandae consectetur blanditiis rerum nesciunt nemo illo ea ex nisi libero possimus, dicta ducimus ullam eaque magnam earum, quidem esse.</p>
+
+            <a href="/status" class="btn_link">Status</a>
+
+
+            <img src="img/sinaletica.png" alt="" class="imagem_att">
+
+
+            <h2 class="subtitulo_att" id="ponto"><strong>Q</strong>uero cadastrar um ponto de coleta</h2>
+            
+            <p class="paragrafo_att">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus alias debitis ipsum, qui aut vitae reprehenderit illum quam facilis tempore corporis odio repudiandae, velit libero, atque animi exercitationem obcaecati consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ratione quas nam. Mollitia necessitatibus explicabo magni iusto possimus officiis ad quia quasi eaque eius! Repellat sapiente libero nostrum quasi dolores?
+            </p>
+            
+            <p class="paragrafo_att">Caso queira saber quais pontos ja temos em nosso sistema <a href="/listaPontos" class="paragrafo_link">Entre aqui</a> para mais informações</p>
+
+
+            <a href="/ponto_cadastro" class="btn_link">Cadastrar</a>
+            <a href="/listaPontos" class="btn_link">Ver pontos de coleta</a>
+
+            <h2 class="subtitulo_att" id="reciclagem"><strong>P</strong>orque a reciclagem é importante ?</h2>
+
+            <p class="paragrafo_att">Ela é uma das maneiras mais eficazes de proteger nossa biodiversidade e prezar pelos recursos naturais. Além disso, elas contribuem para a redução de desastres ambientais, como enchentes, contaminação de rios, mares e solos e reduzem a poluição tal maléfica para os seres vivos.</p>
+            <p class="paragrafo_att">
+              Ela também promove a preservação de habitats naturais e o equilíbrio dos ecossistemas. As áreas protegidas são refúgios para diversas formas de vida, desde plantas e animais até microorganismos essenciais para o planeta. </p>
+              <p class="paragrafo_att">
+                Além disso, contribuem para a redução de desastres ambientais, como enchentes e contaminação de rios, mares e solos, e reduzem a poluição prejudicial aos seres vivos. Ao investir na criação e manutenção de áreas protegidas, estamos construindo um futuro sustentável para as gerações presentes e futuras. 
+              </p>
+              <p class="paragrafo_att">
+                A proteção dessas áreas é uma responsabilidade compartilhada por governos, organizações ambientais e sociedade. Juntos, podemos preservar a biodiversidade e garantir a sustentabilidade do nosso planeta.
+              </p>
+
+              <h2 class="subtitulo_att">O lixo é um problema?</h2>
+              <p class="paragrafo_att">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dolore itaque quis sapiente repellat ab sequi nam ducimus illum architecto minus officiis recusandae ut omnis atque, necessitatibus, veniam voluptatum quo!</p>
+
+              <img src="img/lixo.jpg" alt="" class="imagem_att">
+
+              <p class="paragrafo_att">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam vero, aliquam mollitia laudantium cumque perspiciatis natus delectus deleniti, sapiente non dolore recusandae! Nam ipsam ad ipsa odit dolore sed pariatur?</p>
+
+          </article>
+        </main>
+
+        <div id="RodadePrimario">
+          <footer id="rodape">
+            <h3 id="contato">Email para contato: <strong>npr.contato@gmail.com</strong></h3>
+            <h3 id="contato">Email para dúvidas: <strong>npr.duvidas@gmail.com</strong></h3>
+            <h2 id="redes_sociais">Redes Sociais</h2>
+            <nav id="icones_sociais">
+              <ul>
+                <li><a href="#" target="_blank"><img src="img/facebook.png" alt="" id="icon"></a></li>
+                <li><a href="https://www.instagram.com/n.p.r.brasilsp/" target="_blank"><img src="img/instagram (2).png"
+                      alt="" id="icon"></a></li>
+                <li><a href="#" target="_blank"><img src="img/twitter.png" alt="" id="icon"></a></li>
+              </ul>
+            </nav>
+          </footer>
+        </div>
+
+      </div><!--Fim do conteudo-->
+    </div>
+
+    <div class="espacamento"></div>
+  </div>
+
+
+  <script src="js/script.js"></script>
+
+  <script src="js/carrosel.js"></script>
+
+  <script src="js/map.js"></script>
+
+  <script src="js/mapa.js"></script>
+
+  <script>
+    function alert_cadastro()
+    {
+      
+    }
+  </script>
+
+
+</body>
+
+</html>

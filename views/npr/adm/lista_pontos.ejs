@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pontos Cadastrados</title>
+    <link rel="stylesheet" href="css/tabela.css">
+</head>
+
+<body>
+    <h1>Pontos de coleta cadastrados</h1>
+
+
+
+    <table>
+        <tr>
+            <td>Código</td>
+            <td>Rua</td>
+            <td>Bairro</td>
+            <td>CEP</td>
+            <td>Número</td>
+            <td>Cadastrado por</td>
+            <td>Descrição</td>
+
+        </tr>
+        <% todosPontos.forEach(function(pontoColeta) { %>
+         
+            <tr>
+                <td><%=pontoColeta.cod_ponto%></td>
+                <td><%=pontoColeta.end_rua_coleta%></td>
+                <td><%=pontoColeta.end_bairro_coleta%></td>
+                <td><%=pontoColeta.end_cep_coleta%></td>
+
+                <td><%=pontoColeta.end_num_coleta == "" ? "Null" : pontoColeta.end_num_coleta%></td>
+
+                <td><%=pontoColeta.end_email_usuario%></td>
+                <td><%=pontoColeta.end_descricao_coleta%></td>
+            </tr>
+        <%});%>
+    </table>
+
+        <form action="/deletarPonto" method="post">
+            <h1>Deletar Ponto de coleta</h1>
+            <input type="text" id="codPonto" name="codPonto">
+            <input type="submit" value="Deletar">
+        </form>
+</body>
+</html>

@@ -1,0 +1,585 @@
+body,
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+a:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+#logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#header {
+  box-sizing: border-box;
+  height: 70px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #e7e7e7;
+}
+
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+#menu a {
+  display: block;
+  padding: 0.5rem;
+}
+
+#btn-mobile {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0px;
+    background: #e7e7e7;
+    transition: 0.6s;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+
+  #nav.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+
+  #menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  }
+
+  #btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+
+  #hamburger {
+    border-top: 2px solid;
+    width: 20px;
+  }
+
+  #hamburger::after,
+  #hamburger::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+
+
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 5%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: rgb(0, 155, 26);
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+ 
+}
+
+
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+#mapacss {
+  text-align: center;
+  font-size: arial;
+  color: #03A202;
+}
+
+#titulocarrosel {
+  text-align: center;
+}
+
+#MAPA {
+  text-align: center;
+}
+
+
+#map {
+  position: relative;
+  height: 500px;
+  width: 50%;
+  right: -370px;
+}
+
+#paragrafo1 {
+  font-family: arial;
+  font-size: 15px;
+  text-align: center;
+  width: 45%;
+  text-align: start;
+  position: relative;
+  left: 360px;
+  border-radius: 4px;
+  background-color: #9de5a0;
+  
+}
+
+#botaologin {
+  position: relative;
+  left: 1120px;
+  top: 29px;
+  cursor: pointer;
+  background-color: #F1F0F6;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 9px 15px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+
+
+}
+
+#botaocadastro {
+
+  position: relative;
+  left: 1110px;
+  top: 29px;
+  cursor: pointer;
+
+  background-color: #F1F0F6;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 9px 15px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+
+
+}
+
+
+.button {
+
+  display: inline-block;
+  padding: 10px 25px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #03A303;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #999;
+
+
+}
+
+.button:hover {
+  background-color: #3e8e41;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#botaogrande {
+
+
+  position: relative;
+  text-align: center;
+}
+
+#senha {
+  position: relative;
+  top: 10px;
+}
+
+.titulodocarosel {
+  position: relative;
+  top: -40px;
+
+}
+
+#tituloconteudo {
+  color: #726c6c;
+  font-family: arial;
+  position: relative;
+
+
+  text-align: center;
+
+}
+
+
+
+
+.text {
+  color: black;
+  font-size: 15px;
+  bottom: 8px;
+  text-align: start;
+  align-items: flex-end;
+  position: relative;
+  left: 530px;
+  top: -150px;
+  width: 300px;
+  font-family: arial;
+  font-size: 15px;
+
+
+}
+
+.text2 {
+  color: black;
+  font-size: 15px;
+  bottom: 8px;
+  text-align: start;
+  align-items: flex-end;
+  position: relative;
+  left: 530px;
+  top: -190px;
+  width: 300px;
+  font-family: arial;
+  font-size: 15px;
+
+
+}
+
+
+.text3 {
+  color: black;
+  font-size: 15px;
+  bottom: 8px;
+  text-align: start;
+  align-items: flex-end;
+  position: relative;
+  left: 530px;
+  top: -130px;
+  width: 300px;
+  font-family: arial;
+  font-size: 15px;
+
+
+
+}
+
+#titulodocarosel2 {
+  position: fixed;
+  position: relative;
+  top: -35px;
+}
+
+body strong {
+  color: #03A303;
+
+
+}
+
+#tituloconteudo2 {
+  color: #726c6c;
+  font-family: arial;
+  position: relative;
+
+
+  text-align: center;
+
+}
+
+
+
+#paragrafo1 {
+    padding: 5px;
+    text-align: left;
+    font-family: arial;
+    font-size: 18px;
+    position: relative;
+    width: 80%;
+    left: 50px;
+
+}
+
+#paragrafo2 {
+
+  font-family: arial;
+  font-size: 18px;
+  position: relative;
+  width: 80%;
+  right: -50px;
+
+
+
+
+}
+
+#palmiteira {
+  text-align: center;
+}
+
+
+body {
+  background-color: #F1F0F6;
+  font-family: arial;
+}
+
+#rodape {
+  font-family: arial;
+  width: 100%;
+
+
+}
+
+#tireassuasduvidas {
+  position: relative;
+
+}
+
+#caixadepergunta {
+  width: 320px;
+  height: 300px;
+}
+
+#enviar {
+  background-color: #03A303;
+  border-radius: 5px 0px 5px 0px;
+  font-family: arial;
+  color: white;
+  padding: 3px 15px;
+
+}
+
+#deletar {
+  background-color: #03A303;
+  border-radius: 5px 0px 5px 0px;
+  font-family: arial;
+  color: white;
+  padding: 3px 15px;
+
+}
+
+
+#duvida {
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  left: -1px;
+
+
+  display: flex;
+  justify-content: flex-end;
+  top: -5px
+}
+
+#duvidatitulo {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top: -10px;
+  left: -85px;
+
+
+
+  /* display flex : ele vai dae objeto movivel  justify-content : flex - end : ira colocar o elemento no canto da página */
+}
+
+#paidopai {
+  background-color: #E1DDF4;
+
+}
+
+#cordefundo {
+  background-color: #E5E1F4;
+  border:none;
+}
+
+#imagemiiii {
+  position: relative;
+  left: -140px;
+  top: 8px
+}
+
+
+#titulocarroselk {
+  font-size: 15px;
+  text-align: center;
+
+}
+
+#imagemdocarrosel1 {
+  position: absolute;
+  left: 170px;
+
+}
+
+
+.alinhamento {
+  font-size: 15px;
+  line-height: 25px;
+  margin: 0px 25px;
+  text-align: center;
+
+}
+
+#imagemdocarrosel2 {
+  position: relative;
+  left: 150px;
+}
+
+#imagemdocarrosel3 {
+  position: relative;
+  left: 150px;
+
+}
+
+#imagemdocarrosel1{
+  position: relative;
+  left: 150px;
+
+
+}
+
+#map{
+position: relative;
+left: 103px;
+width: 300px;
+
+}
+
+#titulomapa{
+  text-align: center;
+  font-family: arial;
+  color: #03A202;
+
+}
+
+
+
+#logotipoNPR{
+
+  position: absolute;
+  top:-23px;
+  left: -3px;
+}
+
+

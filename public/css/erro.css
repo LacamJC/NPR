@@ -1,0 +1,33 @@
+
+
+#msg_erro, .msg
+{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    justify-content: space-around;
+
+    font-size: 0.8em;
+
+    width: 300px;
+    min-height: 0px;
+
+    background-color: white;
+
+    /* border: 1px solid black; */
+}
+
+#frase_erro
+{
+    border: 1px solid rgba(0, 0, 0, 0.171);
+    border-radius: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 0, 0, 0.486);
+    margin: 10px 0px;
+    padding: 5px;
+}
+
