@@ -766,62 +766,7 @@ hr {
   text-decoration: underline;
 }
 
-.indice 
-{
-  margin: 20px 0px;
-  background-color: #a0ffa379;
-  min-height: 300px;
-  border: 2px solid #03A202;
-  padding: 10px;
-  border-radius: 20px;
-  width: 70%;
-}
 
-.lista_indice
-{
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  /* border: 1px solid black; */
-  list-style-position: inside;
-  flex-direction: column;
-  width: 90%;
-  margin: auto;
-
-}
-
-.lista_item_indice
-{
-  /* background-color: rgba(115, 255, 0, 0.938); */
-  /* padding: 5px; */
-  margin: 10px 0px;
-  font-size: 1.1em;
-  list-style-type: disclosure-closed;
-  font-weight: bold;
-}
-
-.lista_item_indice a 
-{
-  padding: 5px;
-  margin: 10px 0px;
-  color: #383434;
-  text-decoration: none; 
-  /* padding: 5px 10px;
-  /* background-color: red; */
-  transition: 0.5s ease-in-out;
-}
-
-.lista_item_indice a:hover
-{
- 
-  text-decoration: underline;
-  text-decoration-color: #03A202;
-  text-decoration-thickness: 2px; /* Altere o valor da espessura conforme desejado */
-  text-underline-offset: 5px; /*Distancia entre a palavra e a linha*/
-  background-color: #02a20233;
-
-  
-}
 
 .imagem_att
 {
@@ -866,4 +811,80 @@ flex-wrap: wrap;
 
 #rodape ul li {
 margin: 10px;
+}
+
+/* ESTILIZACAO DO INDICE*/
+
+.indice 
+{
+  margin: 20px 0px;
+  background-color: #a0ffa379;
+  min-height: 300px;
+  border: 2px solid #03A202;
+  padding: 10px;
+  border-radius: 20px;
+  width: 200px;
+}
+
+.indice h2 
+{
+  font-size: 1.1em;
+}
+
+.lista_indice
+{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  /* border: 1px solid black; */
+  list-style-position: inside;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+
+}
+
+.lista_item_indice
+{
+  background-color: rgba(115, 255, 0, 0.938);
+  padding: 5px;
+  margin: 10px 0px;
+  font-size: 0.8em;
+  list-style-type: disclosure-closed;
+  font-weight: bold;
+
+  width: 90%;
+  text-align: left;
+}
+
+.lista_item_indice a 
+{
+  padding: 5px;
+  margin: 10px 0px;
+  color: #383434;
+  text-decoration: none; 
+  
+   
+  /* background-color: red; */
+  transition: 0.5s ease-in-out;
+}
+
+.lista_item_indice a:hover
+{
+ 
+  text-decoration: underline;
+  text-decoration-color: #03A202;
+  text-decoration-thickness: 2px; /* Altere o valor da espessura conforme desejado */
+  text-underline-offset: 5px; /*Distancia entre a palavra e a linha*/
+  background-color: #02a20233;
+
+  
+}
+
+.firstInfo
+{
+  display: grid;
+  grid-template-columns: 70% 30%;
+  align-items: start;
+  justify-items: center;
 }
