@@ -1,0 +1,26 @@
+#rodape
+{
+  position: relative;
+  bottom: 0;
+  background-color: white;
+  margin-top: 100px;
+  width: 100%;
+  
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#rodape ul {
+list-style: none;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+#rodape ul li {
+margin: 10px;
+}
