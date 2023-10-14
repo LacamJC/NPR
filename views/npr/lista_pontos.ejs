@@ -41,6 +41,9 @@
                     <h1>Pontos de coleta cadastrados</h1>
 
                     <div id="tabela">
+                            <%if(pontoColeta.length==0){%>
+                                <h1>SEM PONTOS DE COLETAS CADASTRADOS</h1>
+                                <%}%>
 
                             <% console.log(pontoColeta.length);for(i=0; i < pontoColeta.length; i++) {
                             if(numLista[i].length == 0){numLista[i] = "Não informado"}%>
