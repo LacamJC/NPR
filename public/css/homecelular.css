@@ -451,13 +451,6 @@ body {
 
 }
 
-#rodape {
-
-  width: 100%;
-
-
-}
-
 #tireassuasduvidas {
   position: relative;
 
@@ -606,16 +599,7 @@ hr {
   width: 50px;
 }
 
-#rodape ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
 
-#rodape ul li {
-  margin: 10px;
-}
 
 #contato {
   font-size: 17px;
@@ -647,7 +631,7 @@ hr {
     /*border: 2px solid black;*/
     background-color: #117614;
     margin: auto;
-
+    margin-bottom: 100px;
 
     /*Bordas das caixas de texto estao em css/bg_img.css*/
   }
@@ -671,26 +655,16 @@ hr {
     display: none;
   }
 
-  #rodape
-  {
 
-    width: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
 
   .conteudo_principal_regua
   {
     margin: auto;
-    width: 80%;
+    width: 100%;
     background-color: #F1F0F6;
     /*border: 2px solid red;*/
 
     padding: 10px;
-    border-radius: 10px;
     margin-top: 30px;
   }
 
@@ -862,4 +836,34 @@ hr {
     width: 100%;
     border-radius: 0px;
   }
+}
+
+
+
+/* Estilizacao do rodape */
+#rodape
+{
+  position: relative;
+  bottom: 0;
+  background-color: white;
+  margin-top: 100px;
+  width: 100%;
+  
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#rodape ul {
+list-style: none;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+#rodape ul li {
+margin: 10px;
 }
