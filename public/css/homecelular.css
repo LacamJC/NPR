@@ -776,10 +776,73 @@ hr {
 
 @media screen and (max-width:1000px)
 {
-  .indice
+  body
+  {
+    background-color: white;
+  }
+  .conteudo_pag-1000
+  {
+    /* width: 70%; */
+    
+    /*border: 2px solid black;*/
+    background-color: #117614;
+    margin: auto;
+    margin-bottom: 100px;
+
+    /*Bordas das caixas de texto estao em css/bg_img.css*/
+  }
+
+  .logotipoNPR 
+  {
+    position: relative;
+  } 
+
+
+  #map
+  {
+    margin: auto;
+    width: 100%;
+    height: 600px;
+    background-color: brown;
+  } 
+
+  #controle
+  {
+    display: none;
+  }
+
+
+
+  .conteudo_principal_regua
+  {
+    margin: auto;
+    width: 100%;
+    background-color: #F1F0F6;
+    /*border: 2px solid red;*/
+
+    padding: 10px;
+    margin-top: 30px;
+  }
+
+  .slider
   {
     width: 100%;
-    border-radius: 0px;
+    
+  }
+
+  #palmiteira img
+  {
+    width: 400px;
+    height: 400px;
+  }
+
+  #separacao
+  {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    z-index: 0;
+    padding-top: 100px;
   }
 }
 

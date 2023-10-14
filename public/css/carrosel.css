@@ -1,7 +1,7 @@
 .slider
 {
   margin: 10px auto;
-  width: 425px;
+  width: 100%;
   /* border: 1.5px solid #1C7837; */
   height: 450px;
   overflow: hidden;
@@ -132,10 +132,9 @@ transition: 1s;
 {
   .slider
   {
-    width: 100%;
     border: none;
     box-shadow: 0px 0px 10px 2px #00000024;
-    border-radius: 15px;
+
   }
 
   .slide
@@ -147,14 +146,14 @@ transition: 1s;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    border-radius: 15px;
+
     
-    background-color: #fff
+    background-color: rgba(135, 191, 255, 0.507)
   }
 
   #Carrasdosel_area
   {
-    width: 80%;
+    width: 100%;
     margin: auto;;
   }
 

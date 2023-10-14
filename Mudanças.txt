@@ -1,0 +1,1 @@
+Resolvi tirar o mapa da Home e deixalo apenas no status
