@@ -29,6 +29,7 @@ const rotas = require("./routes/router")
 const bodyParser = require('body-parser')
 const usuario = require("./database/produtos.js")
 const pontoColeta = require("./database/pontoColeta.js")
+const agenda = require('./database/agenda.js')
 /*
 express.json() analisa os dados do formulario que  ficam no corpo de solicitação (POST),
 também chamado de request de entrada, para ser enviado ao servidor web

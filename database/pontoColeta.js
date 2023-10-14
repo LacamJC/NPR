@@ -69,6 +69,6 @@ const pontoColeta = database.define('tbPontoColeta', {
 
 
 
-//pontoColeta.sync({force: true})
+pontoColeta.sync({force: true})
 
 module.exports = pontoColeta
