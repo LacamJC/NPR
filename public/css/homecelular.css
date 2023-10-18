@@ -947,3 +947,17 @@ hr {
   align-items: start;
   justify-items: center;
 }
+
+@media (max-width: 700px)
+{
+  .indice
+  {
+    display: none;
+    background-color: red;
+  }
+
+  .firstInfo
+  {
+    display: flex;
+  }
+}
