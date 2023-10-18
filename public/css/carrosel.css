@@ -13,6 +13,9 @@
   width: 400%;
   height: 500px;
   display: flex;
+  background-image:linear-gradient(250deg, green,rgb(82 231 82));
+  color: black;
+  font-weight: bold;
 }
 
 .slides input 
@@ -148,7 +151,7 @@ transition: 1s;
     flex-direction: column;
 
     
-    background-color: rgba(135, 191, 255, 0.507)
+    /* background-color: rgba(135, 191, 255, 0.507) */
   }
 
   #Carrasdosel_area
