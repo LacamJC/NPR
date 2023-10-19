@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de coleta</title>
+</head>
+<body>
+    <form action="/agendaColeta" method="post">
+        <div class="inputField">
+            <label for="" class="nome">Cep</label>
+            <input type="text" name="cep" id="id_cep">
+        </div>
+
+        <div class="inputField">
+            <label for="">Data</label>
+            <input type="date" name="data" id="data">
+        </div>
+
+        <div class="inputField"> 
+            <label for="">Tipo</label>
+            <input type="checkbox" name="eletronico" id="eletronico"><label for="eletronico">Eletrônico</label>
+            <input type="checkbox" name="organico" id="organico"><label for="organico">Orgânico</label>
+            <input type="checkbox" name="oleo" id="oleo"><label for="oleo">Oléo</label>
+            <input type="checkbox" name="reciclavel" id="reciclavel"><label for="reciclavel">Reciclável</label>
+        </div>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script src="js/mascara.js"></script>
+</body>
+</html>

@@ -83,6 +83,10 @@ router.get('listaPontos', function(req,res)  {
 //     res.render('../views/npr/adm/lista_usuarios.ejs')
 // })
 
+router.get("/admAgenda", function(req,res) {
+    res.render('../views/npr/adm/cadastro_agenda.ejs')
+})
+
 
 
 module.exports = router

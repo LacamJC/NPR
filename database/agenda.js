@@ -9,17 +9,20 @@ const agenda = database.define('agenda', {
         allowNull: false
     },
 
+
     endereco: {
         type: Sequelize.TEXT
     },
 
-    dia: {
+    data: {
         type: Sequelize.TEXT
     },
 
     tipo: {
         type: Sequelize.TEXT
     }
+
+
 })
 
 agenda.sync({force: true})

@@ -426,6 +426,33 @@ aplicacao.get('/listaPontos', function(req, res) {
         }
       });
 
+      aplicacao.post('/agendaColeta', function(req,res) {
+        console.log('CADASTRANDO AGENDAMENTO DE COLETA')
+        
+        let Data = req.body.data;
+        let Cep = req.body.cep;
+        let Oleo = req.body.oleo;
+        let Reciclavel  = req.body.reciclavel
+        let Organico  = req.body.organico
+        let Eletronico = req.body.eletronico
+
+        var data = "";
+        var endereco = "";
+        var tipo = [];
+        
+        Oleo == "on" ? tipo.push("oleo") : false; 
+        Reciclavel == "on" ? tipo.push("reciclavel") : false;
+        Organico == "on" ? tipo.push("organico") : false;
+        Eletronico == "on" ? tipo.push("eletronico") : false;
+        
+        
+        
+ 
+        console.log(Data,Cep, tipo)
+
+        res.render("../views/npr/adm/cadastro_agenda.ejs")
+      })
+
 
 /* servidor web fica na escuta da solicitação do cliente (computador q possui navegador) na  porta 3000 */
 aplicacao.listen(3000, function(req, res) {
