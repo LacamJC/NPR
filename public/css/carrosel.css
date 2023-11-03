@@ -13,7 +13,7 @@
   width: 400%;
   height: 500px;
   display: flex;
-  background-image:linear-gradient(250deg, green,rgb(82 231 82));
+  background-image:linear-gradient(250deg, white,whitesmoke);
   color: black;
   font-weight: bold;
 }
