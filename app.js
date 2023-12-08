@@ -453,6 +453,11 @@ aplicacao.get('/listaPontos', function(req, res) {
         res.render("../views/npr/adm/cadastro_agenda.ejs")
       })
 
+    
+    aplicacao.get('/alterarInfo', function(req,res) {
+        console.log("ALTERACAO DE INFORMAÇÔES NO BANCO DE DADOS")
+        
+    })
 
 /* servidor web fica na escuta da solicitação do cliente (computador q possui navegador) na  porta 3000 */
 aplicacao.listen(3000, function(req, res) {

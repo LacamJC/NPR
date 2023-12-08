@@ -87,6 +87,16 @@ router.get("/admAgenda", function(req,res) {
     res.render('../views/npr/adm/cadastro_agenda.ejs')
 })
 
+router.get('/alterarNome', function(req,res) {
+    res.render('../views/npr/adm/alterar/nome.ejs')
+})
+router.get('/alterarEmail', function(req,res) {
+    res.render('../views/npr/adm/alterar/email.ejs')
+})
+
+router.get('/alterarSenha', function(req,res) {
+    res.render('../views/npr/adm/alterar/senha.ejs')
+})
 
 
 module.exports = router
