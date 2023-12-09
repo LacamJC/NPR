@@ -61,8 +61,13 @@ aplicacao.post('/add_usuario', function(req,res){
     let valCep = req.body.cepUsuario 
     var msg = ""
     console.log("#########")
-    console.log("Senha : "+cadSenha)
-    console.log("Confirma senha : "+cadConfirmaSenha)
+    console.warn("Adicionando novo usuario processo em andamento")
+    console.log(`Nome           : ${valNome} `)
+    console.log(`Email          : ${valEmail}`)
+    console.log(`Telegone       : ${valTel} `)
+    console.log(`CPF            : ${valCpf} `)
+    console.log(`Senha          : ${cadSenha}`)
+    console.log(`Confirma senha : ${cadConfirmaSenha} `)
     console.log("#########")
 
     

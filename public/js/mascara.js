@@ -1,4 +1,5 @@
-const campoTEL = document.getElementById('id_tel');
+const campoTEL = document.getElementById('FloatingTel');
+
 
 campoTEL.addEventListener('keypress', () =>
 {
@@ -20,7 +21,7 @@ campoTEL.addEventListener('keypress', () =>
     }
 })
 
-const campoCPF = document.getElementById('id_cpf');
+const campoCPF = document.getElementById('FloatingCPF');
 
 
 campoCPF.addEventListener('keypress', () =>
