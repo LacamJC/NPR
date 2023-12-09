@@ -43,9 +43,10 @@
            
                     <div class="row">
                         <form method="post" action="/add_usuario" class="col col-10 m-5 border border-secondary p-4 bg-light">
+                            <%if(msg.length >0){%>
                             <div class="msg bg-danger text-danger-emphasis border border-dark border-2 rounded p-2">
                                 <%=msg%>
-                            </div>
+                            </div><%}%>
                             <h1>Cadastro para novo Usuário</h1>
                             <div class="form-floating m-2">
                                 <input type="text" name="nomeUsuario" id="FloatingName" class="form-control" placeholder="Nome completo" required value="<%= valNome %>">
