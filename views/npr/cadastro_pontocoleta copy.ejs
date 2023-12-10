@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre seu ponto de coleta</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+    <link rel="stylesheet" href="css/homecelular.css" type="text/css">
+    <link rel="stylesheet" href="css/cadastro_coleta.css" type="text/css">
+    <link rel="stylesheet" href="css/form.css" type="text/css"> 
+    <link rel="stylesheet" href="css/bg_img.css" type="text/css">
+    <link rel="stylesheet" href="css/fonte.css" type="text/css">
+    <link rel="stylesheet" href="css/footer.css" type="text/css">
+    <link rel="shortcut icon" href="img/icon_reciclagem-Naoseidasdquasnt.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/erro.css">
+
+</head>
+<body>
+    <div class="bg_img">
+        <div class="conteudo_pag-1000">
+            <header id="header">
+                <div id="logotipoNPR">
+                    <img src="img/logotipoNPRcelularcomNPRPARAFORA.svg" width="120px" height="120px">
+                </div>
+                <div id="logo">
+        
+                </div>
+                <nav id="nav">
+                    <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                        aria-expanded="false">Menu
+                        <span id="hamburger"></span>
+                    </button>
+                    <ul id="menu" role="menu">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/status">Status</a></li>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/cadastro">Cadastro</a></li>
+                        <li class="pag_active"><a href="/ponto_cadastro">Ponto de coleta</a></li>
+                    </ul>
+                </nav>
+            </header>
+          
+          <div class="conteudo_principal_regua" style="background-color:transparent
+          ;">
+            <form action="/add_ponto_coleta" method="post" id="formulario_envio">
+                <h1>Cadastro do ponto de coleta</h1>
+
+                <div class="msg">
+                    <% for(i=0; i < msg.length; i++) {%>
+                        <div id="frase_erro"><%=msg[i]%></div>
+                    <%}%>
+                  </div>
+
+                  <div>
+                    <%=msg_email%>
+                  </div>
+                <div class="form_item">
+                    <label for="">Informe seu email <span>*</span></label>
+                    <input type="text" name="endEmailUsuario" id="" placeholder="Email" class="form_caixa_texto" required>
+                </div>
+                <div class="form_item">
+                    <label for="">Informe sua senha <span>*</span></label>
+                    <input type="password" name="endSenhaUsuario" id="" maxlength="6" placeholder="Senha" class="form_caixa_texto">
+                </div>
+<!-- 
+                <div class="form_item">
+                    <label for="">Informe seu bairro <span>*</span></label>
+                    <input type="text" name="enderecoPontocoleta" id="endereco" placeholder="Rua, bairro, N" class="form_caixa_texto">
+                </div> -->
+
+                <div class="form_item">
+                    <label for="">Descrição<span>*</span></label>
+                    <input type="text" name="enderecoPontoDescricao" id="enderecoPontoDescricao" class="form_caixa_texto">
+                </div>
+
+
+                <div class="form_item">
+                    <label for="">Ponto de referencia <span>*</span></label>
+                    <input type="text" name="enderecoPontoReferencia" id="" class="form_caixa_texto">
+                </div>
+
+
+                <div class="form_item">
+                    <label for="">Informe o CEP <span>*</span></label>
+                    <input type="text" name="enderecoCepPontocoleta" id="id_cep" maxlength="9" placeholder="Ex: 01110-000" class="form_caixa_texto" required onblur="consultarCEP()">
+                </div>
+
+
+                <div id="cepInvalido"></div>
+
+                <div class="form_item">
+                    <label for="">Rua</label>
+                    <input type="text" name="" id="infoRua" class=" form_caixa_texto travado" readonly>
+                </div>
+
+                <div class="form_item">
+                    <label for="">Bairro</label>
+                    <input type="text" name="" id="infoBairro" class="form_caixa_texto travado" readonly>
+                </div>
+
+                <div class="form_item">
+                    <label for="">Cidade</label>
+                    <input type="text" name="" id="infoCidade" class="form_caixa_texto travado" readonly>
+                </div>
+
+                <div class="form_item">
+                    <label for="">Informe o número</label>
+                    <input type="text" name="enderecoNumPontocoleta" id="" placeholder="Ex: 90" class="form_caixa_texto">
+                </div>
+
+                <div class="form_item" style="font-size: 0.8em;">
+                    <label for="enderecoImagemPontocoleta" class="arquivo">Coloque uma imagem do local</label>
+                    <input type="file" name="enderecoImagemPontocoleta" id="enderecoImagemPontocoleta">
+                </div>
+
+    
+
+
+                <h2>Tipo de coleta</h2>
+                <div class="checkbox_list">
+                    
+                    <div class="checkbox_item">
+                        <label for="lixoEletronico"><input type="checkbox" name="lixoEletronico" id="lixoEletronico"><img src="img/icons/lixo_eletronico.png" alt="ICON lixo eletronico" class="icon_img_checkbox"> Lixo eletrônico</label>
+                    </div>
+                    <div class="checkbox_item">
+                        <label for="lixoOrganico"><input type="checkbox" name="lixoOrganico" id="lixoOrganico"><img src="img/icons/lixo_organico.png" alt="ICON lixo organico" class="icon_img_checkbox"> Lixo Orgânico</label>
+                    </div>
+                    <div class="checkbox_item">
+                        <label for="lixoOleo"><input type="checkbox" name="lixoOleo" id="lixoOleo"><img src="img/icons/lixo_oleo.png" alt="ICON lixo oleo" class="icon_img_checkbox"> Oléo</label>
+                    </div>
+                    <div class="checkbox_item">
+                        <label for="lixoReciclavel"><input type="checkbox" name="lixoReciclavel" id="lixoReciclavel"><img src="img/icons/lixo_reciclavel.png" alt="ICON lixo reciclavel" class="icon_img_checkbox"> Lixo Reciclável</label>
+                    </div>
+
+                    <!-- <div class="checkbox_item">
+                        <label for="lixoIndustrial"><input type="checkbox" name="" id="lixoIndustrial">Lixo Industrial</label>
+                    </div> -->
+                </div>
+
+                <!-- <div class="file-drop-area">
+                    <input type="file" id="my-file-input" class="file-input">
+                    <div class="drop-message">Jogue o arquivo aqui</div>
+                    <img id="selected-image" src="" alt="Imagem selecionada">
+                </div> -->
+ 
+                <input type="submit" value="Cadastrar ponto de coleta" class="btn_enviar" onclick="cadastro_ponto()">
+            </form>
+          </div>
+        </div>
+        <footer id="rodape">
+            <h3 id="contato">Email para contato: <strong>npr.contato@gmail.com</strong></h3>
+            <h3 id="contato">Email para dúvidas: <strong>npr.duvidas@gmail.com</strong></h3>
+            <h2 id="redes_sociais">Redes Sociais</h2>
+            <nav id="icones_sociais">
+              <ul>
+                <li><a href="#" target="_blank"><img src="img/facebook.png" alt="" id="icon"></a></li>
+                <li><a href="https://www.instagram.com/n.p.r.brasilsp/" target="_blank"><img src="img/instagram (2).png"
+                      alt="" id="icon"></a></li>
+                <li><a href="#" target="_blank"><img src="img/twitter.png" alt="" id="icon"></a></li>
+              </ul>
+            </nav>
+          </footer>
+    </div>
+
+    <script>
+        const campoCEP = document.getElementById('id_cep');
+
+        campoCEP.addEventListener('keypress', () =>
+        {
+            let pos_caractereCEP = campoCEP.value.length;
+
+            if (pos_caractereCEP == 5)
+            {
+                campoCEP.value += '-'
+            }
+        })
+
+        //////////
+
+        function consultarCEP() {
+            
+        const cep = document.getElementById('id_cep').value.replace('-','');
+        console.log(cep)
+        console.log("Procurando cep")
+        console.log(`https://viacep.com.br/ws/${cep}/json/`)
+
+        if (cep.length === 8) {
+            axios.get(`https://viacep.com.br/ws/${cep}/json/`)
+                .then(response => {
+                    const endereco = response.data;
+                    if (endereco.erro) {
+                        console.log('CEP não encontrado');
+                        
+                        document.getElementById("cepInvalido").innerHTML = "CEP inválido"
+                    } else {
+                        console.log(endereco)
+                        document.getElementById("cepInvalido").innerHTML = ""
+                        document.getElementById('infoRua').value = endereco.logradouro;
+                        document.getElementById('infoBairro').value = endereco.bairro;
+                        document.getElementById('infoCidade').value = endereco.localidade;
+                        // Preencha outros campos de endereço que você deseja exibir
+                    }
+                })
+                .catch(error => {
+                    console.log('Erro ao consultar o CEP:', error);
+                });
+        } 
+        else if(cep.length < 7)
+        {
+            document.getElementById("cepInvalido").innerHTML = ""
+                        document.getElementById('infoRua').value = "";
+                        document.getElementById('infoBairro').value = "";
+                        document.getElementById('infoCidade').value = "";
+        }
+    }
+       
+    </script>
+
+    <script src="js/mascara.js"></script>
+    <script src="js/imagem_seletor.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

@@ -235,7 +235,7 @@ aplicacao.post('/add_ponto_coleta', function(req, res) {
             console.log("################################")
             console.log("################################")
             console.log("################################")
-            var msg_email = "Email ou senha incorretos"
+            msg.push("Email ou senha incorretos")
             criar = 1
             res.render('../views/npr/cadastro_pontocoleta.ejs', {msg_email : msg_email, msg : msg})
         }

@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastre seu ponto de coleta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 
     <link rel="stylesheet" href="css/homecelular.css" type="text/css">
     <link rel="stylesheet" href="css/cadastro_coleta.css" type="text/css">
-    <link rel="stylesheet" href="css/form.css" type="text/css"> 
+    <!-- <link rel="stylesheet" href="css/form.css" type="text/css">  -->
     <link rel="stylesheet" href="css/bg_img.css" type="text/css">
     <link rel="stylesheet" href="css/fonte.css" type="text/css">
     <link rel="stylesheet" href="css/footer.css" type="text/css">
@@ -43,113 +44,84 @@
                 </nav>
             </header>
           
-          <div class="conteudo_principal_regua" style="background-color:transparent
-          ;">
-            <form action="/add_ponto_coleta" method="post" id="formulario_envio">
-                <h1>Cadastro do ponto de coleta</h1>
-
-                <div class="msg">
+          <div class="conteudo_principal_regua" style="background-color:white;">
+            <form action="/add_ponto_coleta" method="post" class="container">
+                <h1>Cadastro de ponto de coleta</h1>
+                <div class="msg" style="margin: auto;">
                     <% for(i=0; i < msg.length; i++) {%>
                         <div id="frase_erro"><%=msg[i]%></div>
                     <%}%>
                   </div>
-
-                  <div>
-                    <%=msg_email%>
-                  </div>
-                <div class="form_item">
-                    <label for="">Informe seu email <span>*</span></label>
-                    <input type="text" name="endEmailUsuario" id="" placeholder="Email" class="form_caixa_texto" required>
+     
+                <div class="form-floating m-4 ">
+                    <input type="email" name="endEmailUsuario" id="floatingInput" class="form-control" placeholder="joao@gmail.com" required>
+                    <label for="floatingInput">Email</label>
                 </div>
-                <div class="form_item">
-                    <label for="">Informe sua senha <span>*</span></label>
-                    <input type="password" name="endSenhaUsuario" id="" maxlength="6" placeholder="Senha" class="form_caixa_texto">
+                <div class="form-floating m-4 ">
+                    <input type="password" name="endSenhaUsuario" id="floatingPassword" class="form-control" placeholder="Senha" autocomplete="off" maxlength="6" required>
+                    <label for="floatingPassword">Senha</label>
                 </div>
-<!-- 
-                <div class="form_item">
-                    <label for="">Informe seu bairro <span>*</span></label>
-                    <input type="text" name="enderecoPontocoleta" id="endereco" placeholder="Rua, bairro, N" class="form_caixa_texto">
-                </div> -->
+        
 
-                <div class="form_item">
-                    <label for="">Descrição<span>*</span></label>
-                    <input type="text" name="enderecoPontoDescricao" id="enderecoPontoDescricao" class="form_caixa_texto">
+        
+                <div class="form-floating m-4 ">
+                    <input type="text" name="enderecoPontoReferencia" id="floatingInput" class="form-control" placeholder="Ponto de referencia">
+                    <label for="floatingInput">Ponto de referencia</label>
                 </div>
-
-
-                <div class="form_item">
-                    <label for="">Ponto de referencia <span>*</span></label>
-                    <input type="text" name="enderecoPontoReferencia" id="" class="form_caixa_texto">
+        
+                <div class="form-floating m-4 ">
+                    <input type="text" name="enderecoCepPontocoleta" id="cep" class="form-control infoCep" placeholder="CEP" maxlength="9" onblur="consultarCEP()" required>
+                    <label for="cep">Informe o CEP</label>
                 </div>
-
-
-                <div class="form_item">
-                    <label for="">Informe o CEP <span>*</span></label>
-                    <input type="text" name="enderecoCepPontocoleta" id="id_cep" maxlength="9" placeholder="Ex: 01110-000" class="form_caixa_texto" required onblur="consultarCEP()">
-                </div>
-
-
-                <div id="cepInvalido"></div>
-
-                <div class="form_item">
-                    <label for="">Rua</label>
-                    <input type="text" name="" id="infoRua" class=" form_caixa_texto travado" readonly>
-                </div>
-
-                <div class="form_item">
-                    <label for="">Bairro</label>
-                    <input type="text" name="" id="infoBairro" class="form_caixa_texto travado" readonly>
-                </div>
-
-                <div class="form_item">
-                    <label for="">Cidade</label>
-                    <input type="text" name="" id="infoCidade" class="form_caixa_texto travado" readonly>
-                </div>
-
-                <div class="form_item">
-                    <label for="">Informe o número</label>
-                    <input type="text" name="enderecoNumPontocoleta" id="" placeholder="Ex: 90" class="form_caixa_texto">
-                </div>
-
-                <div class="form_item" style="font-size: 0.8em;">
-                    <label for="enderecoImagemPontocoleta" class="arquivo">Coloque uma imagem do local</label>
-                    <input type="file" name="enderecoImagemPontocoleta" id="enderecoImagemPontocoleta">
-                </div>
-
-    
-
-
-                <h2>Tipo de coleta</h2>
-                <div class="checkbox_list">
+        
+                <div class="form-floating m-4 ">
                     
-                    <div class="checkbox_item">
-                        <label for="lixoEletronico"><input type="checkbox" name="lixoEletronico" id="lixoEletronico"><img src="img/icons/lixo_eletronico.png" alt="ICON lixo eletronico" class="icon_img_checkbox"> Lixo eletrônico</label>
-                    </div>
-                    <div class="checkbox_item">
-                        <label for="lixoOrganico"><input type="checkbox" name="lixoOrganico" id="lixoOrganico"><img src="img/icons/lixo_organico.png" alt="ICON lixo organico" class="icon_img_checkbox"> Lixo Orgânico</label>
-                    </div>
-                    <div class="checkbox_item">
-                        <label for="lixoOleo"><input type="checkbox" name="lixoOleo" id="lixoOleo"><img src="img/icons/lixo_oleo.png" alt="ICON lixo oleo" class="icon_img_checkbox"> Oléo</label>
-                    </div>
-                    <div class="checkbox_item">
-                        <label for="lixoReciclavel"><input type="checkbox" name="lixoReciclavel" id="lixoReciclavel"><img src="img/icons/lixo_reciclavel.png" alt="ICON lixo reciclavel" class="icon_img_checkbox"> Lixo Reciclável</label>
-                    </div>
-
-                    <!-- <div class="checkbox_item">
-                        <label for="lixoIndustrial"><input type="checkbox" name="" id="lixoIndustrial">Lixo Industrial</label>
-                    </div> -->
+                    <input type="text" name="" id="floatingInput_rua" class="form-control" readonly>
+                    <label for="floatingInput_rua">Rua</label>
+                
                 </div>
-
-                <!-- <div class="file-drop-area">
-                    <input type="file" id="my-file-input" class="file-input">
-                    <div class="drop-message">Jogue o arquivo aqui</div>
-                    <img id="selected-image" src="" alt="Imagem selecionada">
-                </div> -->
- 
-                <input type="submit" value="Cadastrar ponto de coleta" class="btn_enviar" onclick="cadastro_ponto()">
+                <div class="row mb-5">
+                    <div class="form-floating col col-6">
+                    
+                        <input type="text" name="" id="floatingInput_bairro" class="form-control" readonly>
+                        <label for="floatingInput_bairro">Bairro</label>
+                    
+                    </div>
+                    <div class="form-floating col col-6">
+                    
+                        <input type="text" name="" id="floatingInput_cidade" class="form-control" readonly>
+                        <label for="floatingInput_cidade">Cidade</label>
+                    
+                    </div>
+                </div>
+        
+                <label for="formFile" class="form-label">Selecione uma foto para o perfil</label>
+                <input type="file" name="fotoPerfil" id="formFile" class="form-control">
+                <h2 class="mb-5">Tipo de coleta</h2>
+                <div class="btn-group d-flex justify-content-center mb-5">
+                    
+                    <input type="checkbox" name="lixoEletronico" id="btncheck1" class="btn-check m1" autocomplete="off">
+                    <label for="btncheck1" class="btn btn-outline-success">Lixo Eletrônico</label>
+        
+                    <input type="checkbox" name="lixoOrganico" id="btncheck2" class="btn-check" autocomplete="off">
+                    <label for="btncheck2" class="btn btn-outline-success">Lixo Orgânico</label> 
+        
+                    <input type="checkbox" name="lixoOleo" id="btncheck3" class="btn-check" autocomplete="off">
+                    <label for="btncheck3" class="btn btn-outline-success">Oléo</label>
+        
+                    <input type="checkbox" name="lixoReciclavel" id="btncheck4" class="btn-check" autocomplete="off">
+                    <label for="btncheck4" class="btn btn-outline-success">Lixo Reciclável</label>
+                </div>
+                <div class="form-floating m-4 ">
+                    <textarea name="enderecoPontoDescricao" id="floatingTextarea" cols="60" rows="10" class="form-control" placeholder="Descrição do Ponto" style="height: 200px;"></textarea>
+                    <label for="floatingTextarea">Descrição do ponto</label>
+                </div>
+                <input type="submit" value="Enviar" class="btn btn-primary m-4" style="width: 150px;">
+                <input type="reset" value="Resetar" class="btn btn-danger m-4" style="width: 150px;">
             </form>
           </div>
         </div>
+
         <footer id="rodape">
             <h3 id="contato">Email para contato: <strong>npr.contato@gmail.com</strong></h3>
             <h3 id="contato">Email para dúvidas: <strong>npr.duvidas@gmail.com</strong></h3>
@@ -166,62 +138,65 @@
     </div>
 
     <script>
-        const campoCEP = document.getElementById('id_cep');
+                
+        const campoCEP = document.getElementById('cep')
+        
+campoCEP.addEventListener('keypress', () =>
+{
+let pos_caractereCEP = campoCEP.value.length;
 
-        campoCEP.addEventListener('keypress', () =>
-        {
-            let pos_caractereCEP = campoCEP.value.length;
+if (pos_caractereCEP == 5)
+{
+    campoCEP.value += '-'
+}
+})
 
-            if (pos_caractereCEP == 5)
-            {
-                campoCEP.value += '-'
-            }
-        })
+//////////
 
-        //////////
+function consultarCEP() {
 
-        function consultarCEP() {
+const cep = campoCEP.value.replace('-','');
+console.log(cep)
+console.log("Procurando cep")
+console.log(`https://viacep.com.br/ws/${cep}/json/`)
+
+if (cep.length === 8) {
+axios.get(`https://viacep.com.br/ws/${cep}/json/`)
+    .then(response => {
+        const endereco = response.data;
+        if (endereco.erro) {
+            console.log('CEP não encontrado');
             
-        const cep = document.getElementById('id_cep').value.replace('-','');
-        console.log(cep)
-        console.log("Procurando cep")
-        console.log(`https://viacep.com.br/ws/${cep}/json/`)
-
-        if (cep.length === 8) {
-            axios.get(`https://viacep.com.br/ws/${cep}/json/`)
-                .then(response => {
-                    const endereco = response.data;
-                    if (endereco.erro) {
-                        console.log('CEP não encontrado');
-                        
-                        document.getElementById("cepInvalido").innerHTML = "CEP inválido"
-                    } else {
-                        console.log(endereco)
-                        document.getElementById("cepInvalido").innerHTML = ""
-                        document.getElementById('infoRua').value = endereco.logradouro;
-                        document.getElementById('infoBairro').value = endereco.bairro;
-                        document.getElementById('infoCidade').value = endereco.localidade;
-                        // Preencha outros campos de endereço que você deseja exibir
-                    }
-                })
-                .catch(error => {
-                    console.log('Erro ao consultar o CEP:', error);
-                });
-        } 
-        else if(cep.length < 7)
-        {
-            document.getElementById("cepInvalido").innerHTML = ""
-                        document.getElementById('infoRua').value = "";
-                        document.getElementById('infoBairro').value = "";
-                        document.getElementById('infoCidade').value = "";
+            document.getElementById("cepInvalido").innerHTML = "CEP inválido"
+        } else {
+            console.log(endereco)
+            // document.getElementById("cepInvalido").innerHTML = ""
+            document.getElementById('floatingInput_rua').value = endereco.logradouro;
+            document.getElementById('floatingInput_bairro').value = endereco.bairro;
+            document.getElementById('floatingInput_cidade').value = endereco.localidade;
+            // Preencha outros campos de endereço que você deseja exibir
         }
-    }
-       
-    </script>
+    })
+    .catch(error => {
+        console.log('Erro ao consultar o CEP:', error);
+    });
+} 
+else if(cep.length < 7)
+{
+document.getElementById("cepInvalido").innerHTML = ""
+            document.getElementById('floatingInput_rua').value = "";
+            document.getElementById('floatingInput_bairro').value = "";
+            document.getElementById('floatingInput_cidade').value = "";
+            console.log("CEP INVALIDO")
+}
+}
+</script>
 
     <script src="js/mascara.js"></script>
     <script src="js/imagem_seletor.js"></script>
     <script src="js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 </body>
 </html>
