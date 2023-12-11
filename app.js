@@ -465,6 +465,18 @@ aplicacao.get('/listaPontos', function(req, res) {
     })
 
 /* servidor web fica na escuta da solicitação do cliente (computador q possui navegador) na  porta 3000 */
+// aplicacao.listen(3000, function(req, res) {
+//     console.log("########################");
+//     console.log("");
+//     console.log("Servidor Aberto");
+//     console.log("");   
+//     console.log("");
+//     console.log("########################");
+// })
+
+
+
+
 aplicacao.listen(3000, function(req, res) {
     console.log("########################");
     console.log("");
