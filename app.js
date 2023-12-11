@@ -484,7 +484,7 @@ aplicacao.get('/listaPontos', function(req, res) {
 const port = process.env.PORT || 3000;
 
 // Listen on `port` and 0.0.0.0
-app.listen(port, "0.0.0.0", function () {
+aplicacao.listen(port, "0.0.0.0", function () {
   console.log("SERVER OPEN")
 });
 
