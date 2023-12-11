@@ -1,10 +1,8 @@
 const Sequelize = require ('sequelize');
-const sequelize = new Sequelize('railway', 'root', '4F-HdCd2C2hB22c66hAAdE-A1ff1d5hh', {
+const sequelize = new Sequelize('bdNpr', 'ramajo', '', {
     dialect: 'mysql',
-    host: '0.0.0.0',
-    port: 58944
+    host: 'localhost',
+    port: 3306
 })
 
 module.exports = sequelize
-
-//'bdNpr', 'ramajo', '', 
