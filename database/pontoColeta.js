@@ -55,7 +55,7 @@ const pontoColeta = database.define('tbPontoColeta', {
     },
 
     end_imagem_coleta:{
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull: true,
     },
 
@@ -68,6 +68,6 @@ const pontoColeta = database.define('tbPontoColeta', {
 
 
 
-pontoColeta.sync({force: true})
+// pontoColeta.sync({force: true})
 
 module.exports = pontoColeta
