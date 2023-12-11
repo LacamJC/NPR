@@ -74,8 +74,9 @@ var cidadeLista = ""
 var pontoColeta = ""
 var imagemLista = ""
 var nomeLista = ""
+var descricaoLista = ""
 router.get('listaPontos', function(req,res)  {
-    res.render('../views/npr/lista_pontos.ejs', {nomeLista : nomeLista,imagemLista : imagemLista,ruaLista : ruaLista, numLista : numLista, bairroLista : bairroLista, cidadeLista, pontoColeta : pontoColeta })
+    res.render('../views/npr/lista_pontos.ejs', {nomeLista : nomeLista,imagemLista : imagemLista,ruaLista : ruaLista, numLista : numLista, bairroLista : bairroLista, cidadeLista, pontoColeta : pontoColeta, descricaoLista : descricaoLista })
 })
 
 //Leva para area de adminsitrador para ver a lista de usuarios cadastrados

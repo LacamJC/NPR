@@ -194,6 +194,7 @@ aplicacao.post('/add_ponto_coleta', function(req, res) {
                 pontoColeta
                   .create({
                     // end_coleta : req.body.enderecoPontocoleta,
+                    end_nome_ponto : req.body.nomePontocoleta,
                     end_email_usuario: req.body.endEmailUsuario,
                     end_cep_coleta: req.body.enderecoCepPontocoleta,
                     end_rua_coleta: valEndRua,
@@ -343,7 +344,7 @@ aplicacao.get('/listaPontos', function(req, res) {
     console.log("ENVIANDO PONTO DE COLETA PARA A TABELA");
 
     pontoColeta.findAll({
-        attributes: ['end_rua_coleta', 'end_num_coleta', 'end_bairro_coleta', 'end_cidade_coleta', 'end_imagem_coleta', 'end_ponto_referencia', 'tipo_coleta'] // qual coluna será puxada 
+        attributes: ['end_rua_coleta', 'end_num_coleta', 'end_bairro_coleta', 'end_cidade_coleta', 'end_imagem_coleta', 'end_ponto_referencia', 'tipo_coleta', 'end_nome_ponto', 'end_descricao_coleta'] // qual coluna será puxada 
     }).then(pontoColeta => {
         const valoresEndRuaColeta = pontoColeta.map(ponto => ponto.end_rua_coleta);
         const valoresEndNumColeta = pontoColeta.map(ponto => ponto.end_num_coleta);
@@ -352,17 +353,21 @@ aplicacao.get('/listaPontos', function(req, res) {
         const valoresEndFotoColeta = pontoColeta.map(ponto => ponto.end_imagem_coleta);
         const valoresPontoReferencia = pontoColeta.map(ponto => ponto.end_ponto_referencia);
         const valoresTipoPontoColeta = pontoColeta.map(ponto => ponto.tipo_coleta);
+        const valoresNomePontoColeta = pontoColeta.map(ponto => ponto.end_nome_ponto)
+        const valoresDescPontColeta = pontoColeta.map(ponto => ponto.end_descricao_coleta)
         console.log(pontoColeta.length)
         if(valoresEndRuaColeta != null)
         {
+            console.log(`Nome : ${valoresNomePontoColeta}`)
             console.log("RUA : "+valoresEndRuaColeta)
             console.log("NUM : "+valoresEndNumColeta)
             console.log("BAIRRO : "+valoresEndBairroColeta)
             console.log("CIDADE : "+valoresEndCidadeColeta)
             console.log("TIPO: "+valoresTipoPontoColeta)
             console.log("PONTO DE REFERENCIA: "+valoresPontoReferencia)
-            console.log("IMAGEM : "+valoresEndFotoColeta)            
-            res.render('../views/npr/lista_pontos.ejs', {nomeLista : valoresPontoReferencia,ruaLista : valoresEndRuaColeta, numLista : valoresEndNumColeta, bairroLista : valoresEndBairroColeta, cidadeLista : valoresEndCidadeColeta, pontoColeta : pontoColeta, imagemLista : valoresEndFotoColeta, tipoLista : valoresTipoPontoColeta})
+            console.log("IMAGEM : "+valoresEndFotoColeta)     
+            console.log(`Descrição : ${valoresDescPontColeta}`)       
+            res.render('../views/npr/lista_pontos.ejs', {nomeLista : valoresPontoReferencia,ruaLista : valoresEndRuaColeta, numLista : valoresEndNumColeta, bairroLista : valoresEndBairroColeta, cidadeLista : valoresEndCidadeColeta, pontoColeta : pontoColeta, imagemLista : valoresEndFotoColeta, tipoLista : valoresTipoPontoColeta, nomeLista : valoresNomePontoColeta, descricaoLista : valoresDescPontColeta})
         } else {
             console.log("Não encontro a rua")
         }

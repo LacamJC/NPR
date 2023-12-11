@@ -9,6 +9,11 @@ const pontoColeta = database.define('tbPontoColeta', {
         autoIncrement: true,
         primaryKey: true,
     },
+    end_nome_ponto: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    }
+    ,
     end_email_usuario: {
         type: Sequelize.STRING,
         allowNull: false,
@@ -24,12 +29,6 @@ const pontoColeta = database.define('tbPontoColeta', {
         allowNull: false,
       },
       
-
-    // end_coleta:{
-    //     type: Sequelize.STRING,
-    //     allowNull: false,
-    // },
-
     end_cep_coleta:{
         type: Sequelize.STRING,
         allowNull: false,
@@ -61,7 +60,7 @@ const pontoColeta = database.define('tbPontoColeta', {
     },
 
     end_descricao_coleta:{
-        type: Sequelize.STRING, 
+        type: Sequelize.TEXT, 
         allowNull: false,
     },
     
