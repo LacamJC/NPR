@@ -352,7 +352,6 @@ aplicacao.get('/listaPontos', function(req, res) {
         const valoresEndFotoColeta = pontoColeta.map(ponto => ponto.end_imagem_coleta);
         const valoresPontoReferencia = pontoColeta.map(ponto => ponto.end_ponto_referencia);
         const valoresTipoPontoColeta = pontoColeta.map(ponto => ponto.tipo_coleta);
-        console.log(pontoColeta.length)
         if(valoresEndRuaColeta != null)
         {
             console.log("RUA : "+valoresEndRuaColeta)
