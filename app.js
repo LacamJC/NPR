@@ -483,7 +483,7 @@ aplicacao.get('/listaPontos', function(req, res) {
 //Use PORT provided in environment or default to 3000
 const port = process.env.PORT || 3000;
 
-// // Listen on `port` and 0.0.0.0
+// Listen on `port` and 0.0.0.0
 aplicacao.listen(port, "0.0.0.0", function () {
   console.log("SERVER OPEN")
 });
