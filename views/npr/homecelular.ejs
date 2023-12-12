@@ -104,6 +104,10 @@
         <main>
           <article class="article">
 
+            <div class="alert alert-primary m-4">
+              <h4>Para o desenvolvimento desta aplicação, seu Feedback é essencial !</h4>
+              <a href="#Feedback" class="btn btn-primary">Dar Feedback</a>
+            </div>
 
 
             <section class="firstInfo">
@@ -168,13 +172,15 @@
 
       </div><!--Fim do conteudo-->
       <!-- AREA DE COMENTARIOS -->
-        <form action="">
+        <form action="/comentar" method="post" style="margin: auto; " class="container " id="Feedback">
           <div class="mb-3">
-            <div class="form-floating">
-              <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Deixe seu Feedback" id="floatingText"></textarea>
+            <div class="form-floating m-3">
+              <textarea name="txtComentario" id="" cols="10" rows="10" class="form-control" placeholder="Deixe seu Feedback" id="floatingText" style="height: 130px;"></textarea>
               <label for="floatingText">Deixe seu Feedback</label>
             </div>
           </div>
+
+          <input type="submit" value="Enviar" class="btn btn-primary">
         </form>
       <!--  -->
     </div>

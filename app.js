@@ -29,6 +29,7 @@ const rotas = require("./routes/router")
 const bodyParser = require('body-parser')
 const usuario = require("./database/produtos.js")
 const pontoColeta = require("./database/pontoColeta.js")
+const comentarios = require("./database/comentarios.js")
 const agenda = require('./database/agenda.js')
 /*
 express.json() analisa os dados do formulario que  ficam no corpo de solicitação (POST),
@@ -470,6 +471,22 @@ aplicacao.get('/listaPontos', function(req, res) {
         
     })
 
+    aplicacao.post('/comentar', function(req,res){
+        console.log("ENVIANDO COMENTARIO")
+        var comentar = req.body.txtComentario
+        comentarios.create({
+            comentario : req.body.txtComentario,
+        }).then(function(){
+            
+            console.log("SE ESTIVER TUDO CERTO")
+            console.log(comentar)
+            res.render("../views/npr/homecelular.ejs")
+        }).catch(function(erro){
+            res.send("Houve um " + erro)
+
+        })
+    })
+
 /* servidor web fica na escuta da solicitação do cliente (computador q possui navegador) na  porta 3000 */
     // aplicacao.listen(3001, function(req, res) {
     //     console.log("########################");
@@ -487,5 +504,3 @@ const port = process.env.PORT || 3000;
 aplicacao.listen(port, "0.0.0.0", function () {
   console.log("SERVER OPEN")
 });
-
-
