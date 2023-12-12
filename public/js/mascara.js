@@ -14,16 +14,15 @@ const campoCPF = document.getElementById('FloatingCPF');
 
 
 campoCPF.addEventListener('input', () => {
-    console.log("MASCARA DO CEP EM")
+    console.log("MÁSCARA DO CPF EM AÇÃO");
     let value = campoCPF.value.replace(/\D/g, ''); // Remove caracteres não numéricos
 
     if (value.length <= 11) {
         campoCPF.value = value.replace(/(\d{3})(\d{3})(\d{3})/, '$1.$2.$3');
     } else {
-        campoCPF.value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+        campoCPF.value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})$/, '$1.$2.$3-$4');
     }
 });
-
 
 const campoCEP = document.getElementById('floatingCep')
 
