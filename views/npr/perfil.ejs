@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuarios cadastrados</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bg_img.css">
     <link rel="stylesheet" href="css/fonte.css">
     <link rel="stylesheet" href="css/homecelular.css">
@@ -24,9 +25,11 @@
         <div class="conteudo_pag-1000">
           
             <header id="header">
-                <div id="logotipoNPR">
-                  <img src="img/logotipoNPRcelularcomNPRPARAFORA.svg" width="120px" height="120px">
-                </div>
+                <a href="/">
+                    <div id="logotipoNPR">
+                      <img src="img/logotipoNPRcelularcomNPRPARAFORA.svg" width="120px" height="120px">
+                    </div>
+                  </a>
                 <div id="logo">
         
                 </div>
@@ -46,8 +49,6 @@
                 </nav>
               </header>
 
-           
-
               <%
               var palavras = nomeUsuario; 
               var frase = palavras.split(" ");
@@ -55,62 +56,31 @@
               var usuario = primeiras.join(" "); 
             %><!--Tratamento para mostrar apenas nome e sobrenome do usuario-->
 
-              <div class="content">
-                <div class="profile">
-                    <div class="topProfile">
-                        <img src="img/<%=fotoUsuario%>" alt="" class="profilePicture">
-                        <h3><%=usuario%></h3> <a href="/alterarNome">Alterar Informaçẽos</a>
-                        <h4><%=tipoUsuario%></h4>
-                    </div>
-                    <div class="contactInfo">
-                        <div class="item">
-                            <h2>Endereço de email</h2>
-                            <span class="profileInfo"><%=emailUsuario%></span> <a href="/alterarEmail">alterar Informações</a>
-                        </div>
-                        <div class="item">
-                            <h2>Número de telefone</h2>
-                            <span class="profileInfo"><%=telUsuario%></span> <a href="">alterar Informações</a>
-                        </div>
-                        <div class="item">
-                            <h2>Cep</h2>
-                            
-                            <span class="profileInfo" ><%=cepUsuario%></span> 
-                        </div>
-                    </div>
-                </div>
-                <main>
+               <main class="container mt-5">
+                <section class="row ">
 
-                    <%if (nivelUsuario == 1){console.log("USUARIO ADMINISTRADOR")
-                    
-                    %><!--Area para adm-->
-                    <div class="topMain">
-                        <!-- <a href="/admListaUsuarios"  class="adm_consulta" target="_blank">Consultar lista de usuarios cadastrados</a>
-                        
-                        <a href="/admListaPontos" class="adm_consulta" target="_blank">Consultar lista de pontos cadastrados</a> -->
-                        <div class="objLink"><a href="/admListaUsuarios" target="_blank"> <img src="img/icons/cadeado_icon.png" alt="" class="iconList">Consultar Lista de Usuarios cadastrados</a></div>
-                        <div class="objLink"><a href="/admListaPontos" target="_blank"><img src="img/icons/cadeado_icon.png" alt="" class="iconList">Consultar Lista de Pontos cadastrados</a></div>
-                        <div class="objLink"><a href="/admAgenda"><img src="img/icons/cadeado_icon.png" alt="" class="iconList">Cadastrar agenda</a></div>
-                    </div>
-                    <%
-                } else {%>
-                    <!--Area para comum-->
-                    <p>USUARIO NAO ADMINISTREADOR</p>
-                    <%}
-                    
-                    %>
+                    <article class="col-12 bg-primary text-center">
+                        <h2 class="p-2">CABECALHO DA TELA DE PERFIL SLA</h2>
+                    </article>
 
+                    <article class="col col-6 bg-dark text-white">
                     
-                   
-                    
-                </main>
-            </div>
+                            <img src="img/<%=fotoUsuario%>" alt="" class="rounded mx-auto d-block bg-white mt-2 mb-2" style="width: 100px;" >
+                       
+                     
+                    </article>
+                    <article class="col col-6 bg-warning text-white">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae eius doloribus voluptates? Inventore et alias dolor id corrupti voluptatum, consequuntur officia delectus. Est sequi, incidunt quidem reiciendis repudiandae commodi vitae?
+                        </p>
+                    </article>
+                </section>
+              </main>
         </div>
     </div>    
 
-    <script src="js/script.js">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-
-    </script>
 
     <script>
     </script>
