@@ -471,21 +471,21 @@ aplicacao.get('/listaPontos', function(req, res) {
     })
 
 /* servidor web fica na escuta da solicitação do cliente (computador q possui navegador) na  porta 3000 */
-    // aplicacao.listen(3001, function(req, res) {
-    //     console.log("########################");
-    //     console.log("");
-    //     console.log("Servidor Aberto");
-    //     console.log("");   
-    //     console.log("");
-    //     console.log("########################");
-    // })
+    aplicacao.listen(3001, function(req, res) {
+        console.log("########################");
+        console.log("");
+        console.log("Servidor Aberto");
+        console.log("");   
+        console.log("");
+        console.log("########################");
+    })
 
 //Use PORT provided in environment or default to 3000
-const port = process.env.PORT || 3000;
+// const port = process.env.PORT || 3000;
 
-// Listen on `port` and 0.0.0.0
-aplicacao.listen(port, "0.0.0.0", function () {
-  console.log("SERVER OPEN")
-});
+// // Listen on `port` and 0.0.0.0
+// aplicacao.listen(port, "0.0.0.0", function () {
+//   console.log("SERVER OPEN")
+// });
 
 
