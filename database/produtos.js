@@ -59,3 +59,4 @@ const usuario = database.define('usuarios', {
 // usuario.sync({force: true})
 
  module.exports = usuario
+// 
