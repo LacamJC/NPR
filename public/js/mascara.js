@@ -17,7 +17,7 @@ campoCPF.addEventListener('input', () => {
     console.log("MÁSCARA DO CPF EM AÇÃO");
     let value = campoCPF.value.replace(/\D/g, ''); // Remove caracteres não numéricos
 
-    if (value.length <= 11) {
+    if (value.length <= 12) {
         campoCPF.value = value.replace(/(\d{3})(\d{3})(\d{3})/, '$1.$2.$3');
     } else {
         campoCPF.value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})$/, '$1.$2.$3-$4');
