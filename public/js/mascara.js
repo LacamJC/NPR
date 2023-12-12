@@ -1,53 +1,37 @@
 const campoTEL = document.getElementById('FloatingTel');
 
+campoTEL.addEventListener('input', () => {
+    let value = campoTEL.value.replace(/\D/g, ''); // Remove caracteres não numéricos
 
-campoTEL.addEventListener('keypress', () =>
-{
-    let pos_caractereTEL = campoTEL.value.length;
-
-    if(pos_caractereTEL == 0 )
-    {
-        campoTEL.value += '('
+    if (value.length <= 10) {
+        campoTEL.value = value.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
+    } else {
+        campoTEL.value = value.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
     }
-
-    else if(pos_caractereTEL == 3)
-    {
-        campoTEL.value += ')'
-    }
-
-    else if(pos_caractereTEL == 9)
-    {
-        campoTEL.value += '-'
-    }
-})
+});
 
 const campoCPF = document.getElementById('FloatingCPF');
 
 
-campoCPF.addEventListener('keypress', () =>
-{
-    let pos_caractereCPF = campoCPF.value.length;
-    
-    if(pos_caractereCPF == 3 || pos_caractereCPF == 7 )
-    {
-        campoCPF.value += '.'
+campoCPF.addEventListener('input', () => {
+    console.log("MASCARA DO CEP EM")
+    let value = campoCPF.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+
+    if (value.length <= 11) {
+        campoCPF.value = value.replace(/(\d{3})(\d{3})(\d{3})/, '$1.$2.$3');
+    } else {
+        campoCPF.value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
     }
+});
 
-    else if(pos_caractereCPF == 11)
-    {
-        campoCPF.value += '-'
+
+const campoCEP = document.getElementById('floatingCep')
+
+campoCEP.addEventListener('input', () => {
+    console.log("MASCARA DO CEP EM")
+    let value = campoCEP.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+
+    if (value.length === 8) {
+        campoCEP.value = value.replace(/(\d{5})(\d{3})/, '$1-$2');
     }
-})
-
-
-const campoCEP = document.getElementById('id_cep');
-
-campoCEP.addEventListener('keypress', () =>
-{
-    let pos_caractereCEP = campoCEP.value.length;
-
-    if (pos_caractereCEP == 5)
-    {
-        campoCEP.value += '-'
-    }
-})
+});
